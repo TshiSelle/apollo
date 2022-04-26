@@ -24,6 +24,7 @@ const addPage = async (req, res) => {
         console.log(`An error occurred while storing the page in the database: ${err}`)
       });
   }
+
 }
 const deletePage = async (req, res) => {
   const { pageID } = req.body;
