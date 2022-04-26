@@ -11,8 +11,6 @@ const userSchema = new Schema({
   emailVerificationToken: { type: String, unique: true },
   passResetToken: { type: String, expires: '1hr' },
   passResetTokenExpirationDate: { type: Number, expires: '1hr' },
-  SuperAdmin: { type: Boolean, default: false },
-  Admin: { type: Boolean, default: false },
   Writer: { type: Boolean, default: false },
   ReadOnly: { type: Boolean, default: true },
 
