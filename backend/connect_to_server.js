@@ -2,6 +2,10 @@
 const mongoose = require("mongoose")
 const express = require('express')
 const dotenv = require('dotenv')
+const helmet = require('helmet')
+const cors = require('cors');
+const hpp = require('hpp');
+const morgan = require('morgan');
 
 
 const page = require('./routes/pageRouting');
