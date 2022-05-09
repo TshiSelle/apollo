@@ -16,7 +16,6 @@ const getUser = (req, res) => {
         _id: 0,
         Verified: 0,
         Writer: 0,
-        ReadOnly: 0,
         createdAt: 0,
         updatedAt: 0
     })

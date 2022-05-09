@@ -27,7 +27,7 @@ const addPage = async (req, res) => {
     }
   }
   else {
-    res.status(401).json({ message: `Unauthorized `, success: false })
+    res.status(401).json({ message: `Unauthorized`, success: false })
   }
 }
 const deletePage = async (req, res) => {
