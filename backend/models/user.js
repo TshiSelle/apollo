@@ -7,10 +7,7 @@ const userSchema = new Schema({
   Username: { type: String, required: true, unique: true },
   Email: { type: String, required: true, unique: true },
   Password: { type: String, required: true, unique: true },
-  Verified: { type: Boolean, default: false },
   emailVerificationToken: { type: String, unique: true },
-  passResetToken: { type: String, expires: '1hr' },
-  passResetTokenExpirationDate: { type: Number, expires: '1hr' },
   Writer: { type: Boolean, default: false }
 }, { timestamps: true })
 
