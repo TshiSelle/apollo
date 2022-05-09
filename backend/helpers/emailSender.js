@@ -85,7 +85,7 @@ function sendDeactivationEmail(dbUser) {
   var mailOptions = {
     from: sender,
     to: email,
-    subject: `APollo account deactivation for ${username}`,
+    subject: `Apollo account deactivation for ${username}`,
     html: `Hello! <br />Your account will be deactivated at ${deactivationDate.toLocaleString()} <br />You can stop the deactivation process from inside your account settings.`
   };
 
