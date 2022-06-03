@@ -4,6 +4,7 @@ const accounts = require('../controllers/accountController');
 
 const router = express.Router();
 
+router.post('/register', accounts.register);
 router.post('/login', accounts.login);
 router.get('/verify/:username/:emailVerificationToken', accounts.verifyEmail);
 router.post('/changePass', verifyJWT, accounts.changePassword);

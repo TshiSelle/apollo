@@ -4,7 +4,7 @@ const { Page } = require('../models/page')
 
 
 const addPage = async (req, res) => {
-  if (req.user.Writer == true) {
+  if (req.user.body.Writer === true) {
     const { title, body } = req.body;
 
     if (isEmpty(title)) {
@@ -27,7 +27,7 @@ const addPage = async (req, res) => {
     }
   }
   else {
-    res.status(401).json({ message: `Unauthorized`, success: false })
+    return res.status(401).json({ message: `Unauthorized`, success: false })
   }
 }
 const deletePage = async (req, res) => {
