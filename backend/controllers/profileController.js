@@ -1,10 +1,11 @@
-const { User } = require("../models/user");
-const { validateNameChangeInput } = require('../helpers/inputValidation');
+const { User } = require('../models/user');
+const { validateNameChangeInput } = require('../helperFunctions/inputValidation');
+const cloudinary = require('cloudinary').v2;
+const crypto = require('crypto');
+const fs = require('fs-extra');
 
-
-
-changeName = (req, res) => {
-  const { FirstName, LastName } = req.body;
+const changeName = (req, res) => {
+  const { fname, lname } = req.body;
   const { errors, isValid } = validateNameChangeInput(req.body);
   if (!isValid) {
     res.status(400).json({ ...errors, success: false });
@@ -13,23 +14,114 @@ changeName = (req, res) => {
       .then((dbUser) => {
         if (!dbUser) {
           res.status(400).json({ message: 'User not found', success: false });
-        }
-        else {
-          dbUser.FirstName = FirstName;
-          dbUser.LastName = LastName;
-          dbUser.save()
+        } else {
+          dbUser.fname = fname;
+          dbUser.lname = lname;
+          dbUser
+            .save()
             .then(() => {
               res.status(202).json({ message: 'Name updated successfully', success: true });
             })
             .catch((err) => {
-              res.status(500).json({ message: `Error occurred while saving to database : ${err}` });
+              res.status(500).json({
+                message: `Error occurred while saving to database : ${err}`,
+              });
             });
         }
       })
       .catch((err) => {
-        res.status(500).json({ message: `Error occurred while searching for user : ${err}` });
-      })
+        res.status(500).json({
+          message: `Error occurred while searching for user : ${err}`,
+        });
+      });
   }
 };
 
-module.exports = { changeName };
+const setProfilePicture = async (req, res) => {
+  // console.log(req.files);
+  if (!req.files || req.files.File.size <= 0)
+    res.status(400).send({ message: 'No files uploaded, please provide an image', success: false });
+  else {
+    const dbUser = await User.findById(req.user.id);
+    const hasProfilePic = !!dbUser.profilePic;
+    if (hasProfilePic) {
+      cloudinary.uploader.destroy(dbUser.profilePic, {
+        resource_type: 'image',
+      })
+    }
+    let file = req.files.File;
+    file.name = `${dbUser.username}_${crypto.randomBytes(20).toString('hex')}`;
+    // File.name = `${dbUser.username}_${crypto.randomBytes(20).toString('hex')}`;
+    fs.outputFileSync(`./tmp/${file.name}`, file.data);
+    cloudinary.uploader.upload(
+      `./tmp/${file.name}`,
+      {
+        public_id: `user_pics/${file.name}`,
+        unique_filename: false,
+        resource_type: 'image',
+        overwrite: true,
+      },
+      async (err, result) => {
+        if (!err) {
+          try {
+            dbUser.profilePic = `user_pics/${file.name}`;
+            await dbUser.save();
+            res.status(201).json({ message: 'Image upload complete', success: true, result });
+          } catch (error) {
+            res.status(400).json({ message: 'Error occurred while modifying user db info', err, success: false });
+          }
+        } else {
+          res.status(400).json({ message: 'Error occurred while uploading image', err, result, success: false });
+        }
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        if (fs.existsSync('./tmp')) fs.removeSync('./tmp');
+        console.log('in async')
+      }
+    );
+  }
+  console.log('uploaded');
+};
+
+
+const deleteProfilePic = async (req, res) => {
+  const dbUser = await User.findById(req.user.id);
+  const hasProfilePic = !!dbUser.profilePic;
+  if (!hasProfilePic) {
+    res.status(400).json({ message: 'User doesn\'t have profile picture', success: false });
+  } else {
+    console.log(dbUser.profilePic)
+    cloudinary.uploader.destroy(dbUser.profilePic, {
+      resource_type: 'image',
+    }, (err, result) => {
+      if (!err && result.result == 'ok') {
+        dbUser.profilePic = undefined;
+        dbUser.save()
+          .then(() => res.status(200).json({ message: 'User profile picture deleted', success: true }))
+      } else {
+        res.status(400).json({ message: 'Error occurred while removing profile picture', success: false, err });
+      }
+    })
+  }
+
+}
+
+
+const fetchPic = async (req, res) => {
+  const dbUser = await User.findById(req.user.id);
+  if (dbUser.profilePic) {
+    res.status(200).json({ image_url: dbUser.profilePic, success: true });
+  } else {
+    res.status(200).json({ message: 'User does not have profile picture set', success: false });
+  }
+};
+
+module.exports = {
+  changeName,
+  setProfilePicture,
+  fetchPic,
+  deleteProfilePic
+};
