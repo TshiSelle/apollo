@@ -1,4 +1,10 @@
 import axios from "axios";
+import globalVars from "../clientEnvVars";
+
+const host =
+  globalVars.NODE_ENV == "development"
+    ? "http://localhost:8080"
+    : " ";
 
 function PostAxiosCall(endpoint, data, headers) {
   if (!data) data = {};
@@ -6,7 +12,7 @@ function PostAxiosCall(endpoint, data, headers) {
 
   return axios({
     method: "post",
-    url: `http://localhost:8080${endpoint}`,
+    url: `${host}${endpoint}`,
     data: data,
     headers: headers,
   });
@@ -16,7 +22,7 @@ function GetAxiosCall(endpoint, headers) {
   if (!headers) headers = {};
   return axios({
     method: "get",
-    url: `http://localhost:8080${endpoint}`,
+    url: `${host}${endpoint}`,
     headers: headers,
   });
 }
@@ -27,7 +33,7 @@ function PatchAxiosCall(endpoint, data, headers) {
 
   return axios({
     method: "patch",
-    url: `http://localhost:8080${endpoint}`,
+    url: `${host}${endpoint}`,
     data: data,
     headers: headers,
   });
@@ -39,30 +45,38 @@ function DeleteAxiosCall(endpoint, data, headers) {
 
   return axios({
     method: "delete",
-    url: `http://localhost:8080${endpoint}`,
+    url: `${host}${endpoint}`,
     data: data,
     headers: headers,
   });
 }
 
-export function SignUpApiCall(Username, Email, FirstName, LastName, Password, ConfirmPassword) {
+export function SignUpApiCall(
+  username,
+  email,
+  firstName,
+  lastName,
+  password,
+  confirmPassword,
+) {
   const data = JSON.stringify({
-    Username: Username,
-    Email: Email,
-    FirstName: FirstName,
-    LastName: LastName,
-    Password: Password,
-    ConfirmPassword: ConfirmPassword
+    username: username,
+    email: email,
+    fname: firstName,
+    lname: lastName,
+    password: password,
+    confirmPassword: confirmPassword,
   });
 
-
-  return PostAxiosCall('/register', data, { "Content-Type": "application/json" });
+  return PostAxiosCall("/register", data, {
+    "Content-Type": "application/json",
+  });
 }
 
-export function LoginApiCall(Username, Password) {
+export function LoginApiCall(username, password) {
   const data = JSON.stringify({
-    Username: Username,
-    Password: Password,
+    username: username,
+    password: password,
   });
 
   return PostAxiosCall("/account/login", data, {
@@ -70,9 +84,9 @@ export function LoginApiCall(Username, Password) {
   });
 }
 
-export function SendEmail(Email) {
+export function SendEmail(email) {
   const data = JSON.stringify({
-    Email: Email
+    email: email,
   });
 
   return PostAxiosCall("/account/forgotPass", data, {
@@ -80,86 +94,172 @@ export function SendEmail(Email) {
   });
 }
 
-export function PasswordResetWithToken(Username, token, Password, ConfirmPassword) {
+export function PasswordResetWithToken(
+  username,
+  token,
+  password,
+  confirmPassword
+) {
   const data = JSON.stringify({
-    newPassword: Password,
-    ConfirmPassword: ConfirmPassword
+    newPassword: password,
+    confirmPassword: confirmPassword,
   });
-  return PostAxiosCall(`/account/resetPass/${Username}/${token}`, data, {
+  return PostAxiosCall(`/account/resetPass/${username}/${token}`, data, {
     "Content-Type": "application/json",
   });
 }
 
-export function IsEmailTokenValid(Username, passResetToken) {
-  return GetAxiosCall(`/account/resetPass/${Username}/${passResetToken}`);
+export function IsEmailTokenValid(username, passResetToken) {
+  return GetAxiosCall(`/account/resetPass/${username}/${passResetToken}`);
 }
 
-export function ChangeUserPass(authToken, oldPassword, newPassword, ConfirmPassword) {//for logged in user
+export function ChangeUserPass(
+  authToken,
+  oldPassword,
+  newPassword,
+  confirmPassword
+) {
+  //for logged in user
   const data = JSON.stringify({
     oldPassword,
     newPassword,
-    ConfirmPassword
+    confirmPassword,
   });
-  return PostAxiosCall('/account/changePass', data, { 'x-access-token': authToken });
+  return PostAxiosCall("/account/changePass", data, {
+    "x-access-token": authToken,
+  });
 }
 
+export function FilterPages(
+  query,
+  pageTitle,
+  pageNumber
+) {
+  let title = pageTitle ? `&title=${pageTitle}` : ""; //page title (string-anything)
+  let pageNum = pageNumber ? `&pageNum=${pageNumber}` : ""; //number (preferably between 1-maxPageNum)
+  return GetAxiosCall(
+    `/search?searchString=${query}${title}${pageNum}`
+  );
+}
 
-export function IsVerificationTokenValid(Username, emailVerificationToken) {
-  return GetAxiosCall(`/account/verify/${Username}/${emailVerificationToken}`);
+export function GetFilteredPage(id) {
+  return GetAxiosCall(`/page-description/${id}`);
+}
+
+export function IsVerificationTokenValid(username, emailVerificationToken) {
+  return GetAxiosCall(`/account/verify/${username}/${emailVerificationToken}`);
 }
 
 export function IsUserTokenValid(authToken) {
-  return GetAxiosCall('/verifyToken', { 'x-access-token': authToken });
+  return GetAxiosCall("/verifyToken", { "x-access-token": authToken });
 }
 
 export function GetUserInfo(authToken) {
-  return GetAxiosCall('/user-info', { 'x-access-token': authToken });
+  return GetAxiosCall("/user-info", { "x-access-token": authToken });
 }
 
-export function ChangeName(FirstName, LastName, authToken) {
-  const data = JSON.stringify({
-    FirstName,
-    LastName
+export function ChangeName(fname, lname, authToken) {
+  const data = {
+    fname: fname,
+    lname: lname,
+  };
+  return PatchAxiosCall("/profile/editName", data, {
+    "x-access-token": authToken,
   });
-  return PatchAxiosCall('/profile/editName', data, { 'x-access-token': authToken });
 }
 
 export function DeactivateAccount(authToken) {
-  return PostAxiosCall('/account/deactivate', {}, { 'x-access-token': authToken });
+  return PostAxiosCall(
+    "/account/deactivate",
+    {},
+    { "x-access-token": authToken }
+  );
 }
 
-export function StopAccountDeactivation(authToken) {
-  return PostAxiosCall('/account/undeactivate', {}, { 'x-access-token': authToken });
+export function ReactivateAccount(authToken) {
+  return PostAxiosCall(
+    "/account/undeactivate",
+    {},
+    { "x-access-token": authToken }
+  );
 }
 
-export function CreateJournal(authToken, title, body) {
-  const data = JSON.stringify({
-    title,
-    body
+export function CreatePage(authToken, title, body) {
+  const data = { title, body };
+  return PostAxiosCall("/page/create", data, {
+    "x-access-token": authToken,
   });
-  return PostAxiosCall('/journal/create', data, { 'x-access-token': authToken });
 }
 
-export function GetPages(authToken) {
-  return GetAxiosCall('/page/read', { 'x-access-token': authToken });
+export function GetUserPages(authToken) {
+  return GetAxiosCall("/page/read", { "x-access-token": authToken });
 }
 
 export function UpdatePage(authToken, pageID, newTitle, newBody) {
-  const data = JSON.stringify({
+  const data = {
     pageID,
     title: newTitle,
-    body: newBody
-  });
+    body: newBody,
+  };
 
-  return PatchAxiosCall('/page/update', data, { 'x-access-token': authToken });
+  return PatchAxiosCall("/page/update", data, {
+    "x-access-token": authToken,
+  });
 }
 
 export function DeletePage(pageID, authToken) {
-  const data = JSON.stringify({
-    pageID
-  });
+  const data = { pageID };
 
-  return DeleteAxiosCall('/page/delete', { 'x-access-token': authToken });
+  return DeleteAxiosCall("/page/delete", data, {
+    "x-access-token": authToken,
+  });
 }
 
+export function ContactSupport(authToken, supportMessage) {
+  //registered users
+  const data = {
+    supportMessage,
+  };
+
+  return PostAxiosCall("/contact/user", data, { "x-access-token": authToken });
+}
+
+export function ContactSupportExternal(fname, lname, email, supportMessage) {
+  const data = JSON.stringify({
+    fname: fname,
+    lname: lname,
+    email: email,
+    supportMessage: supportMessage,
+  });
+
+  return PostAxiosCall("/contact/external", data, {
+    "Content-Type": "application/json",
+  });
+}
+
+export function UploadProfilePicture(file, authToken) {
+  if (!file || file.size <= 0) {
+    console.log("File is empty");
+    return;
+  }
+  const formData = new FormData();
+  formData.append("File", file);
+  console.log("sending to server");
+  return PostAxiosCall("/profile/setProfilePic", formData, {
+    "Content-Type": "multipart/form-data",
+    "x-access-token": authToken,
+  });
+}
+
+export function GetUserPicture(authToken) {
+  return GetAxiosCall("/profile/getProfilePic", {
+    "x-access-token": authToken,
+  });
+}
+
+export function RemoveUserPicture(authToken) {
+  return DeleteAxiosCall("/profile/removeProfilePic", {
+    "x-access-token": authToken,
+  });
+}
 
