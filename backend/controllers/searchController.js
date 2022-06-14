@@ -1,6 +1,6 @@
-const isEmpty = require('is-empty');
-const { Page } = require('../models/page');
-const { validateSearchInput } = require('../helperFunctions/inputValidation');
+const isEmpty = require("is-empty");
+const { Page } = require("../models/page");
+const { validateSearchInput } = require("../helpers/inputValidation");
 
 const searchPages = async (req, res) => {
   let { searchString, pageNum, title } = req.query;
@@ -9,7 +9,7 @@ const searchPages = async (req, res) => {
   const { errors, isValid } = validateSearchInput(req.query);
 
   if (isEmpty(searchString)) {
-    searchString = '';
+    searchString = "";
   }
 
   if (!isValid) {
@@ -17,14 +17,12 @@ const searchPages = async (req, res) => {
   } else {
     try {
       const query = {
-        $or: [
-          { $text: { $search: searchString } },
-        ],
+        $or: [{ $text: { $search: searchString } }],
         $and: [
           {
             title: {
-              $regex: title ? '.*' + title + '.*' : /.*/,
-              $options: 'i',
+              $regex: title ? ".*" + title + ".*" : /.*/,
+              $options: "i",
             },
           },
         ],
@@ -32,17 +30,23 @@ const searchPages = async (req, res) => {
 
       const searchResults = await Pa.find(query, {
         __v: 0,
-        score: { $meta: 'textScore' },
+        score: { $meta: "textScore" },
       })
         .limit(pagesPerPage)
         .skip((pageNum - 1) * pagesPerPage)
-        .sort({ score: { $meta: 'textScore' }, ...(isEmpty(searchString) && { _id: -1 }) });
+        .sort({
+          score: { $meta: "textScore" },
+          ...(isEmpty(searchString) && { _id: -1 }),
+        });
 
       const numOfResults = await Page.countDocuments(query);
 
-      if (numOfResults > 0 && pageNum > Math.ceil(numOfResults / pagesPerPage)) {
+      if (
+        numOfResults > 0 &&
+        pageNum > Math.ceil(numOfResults / pagesPerPage)
+      ) {
         return res.status(400).json({
-          message: 'Page number too large.',
+          message: "Page number too large.",
           success: false,
           numOfResults,
         });
