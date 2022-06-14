@@ -42,12 +42,10 @@ const changeName = (req, res) => {
 const setProfilePicture = async (req, res) => {
   // console.log(req.files);
   if (!req.files || req.files.File.size <= 0)
-    res
-      .status(400)
-      .send({
-        message: "No files uploaded, please provide an image",
-        success: false,
-      });
+    res.status(400).send({
+      message: "No files uploaded, please provide an image",
+      success: false,
+    });
   else {
     const dbUser = await User.findById(req.user.id);
     const hasProfilePic = !!dbUser.profilePic;
@@ -73,31 +71,25 @@ const setProfilePicture = async (req, res) => {
           try {
             dbUser.profilePic = `user_pics/${file.name}`;
             await dbUser.save();
-            res
-              .status(201)
-              .json({
-                message: "Image upload complete",
-                success: true,
-                result,
-              });
-          } catch (error) {
-            res
-              .status(400)
-              .json({
-                message: "Error occurred while modifying user db info",
-                err,
-                success: false,
-              });
-          }
-        } else {
-          res
-            .status(400)
-            .json({
-              message: "Error occurred while uploading image",
-              err,
+            res.status(201).json({
+              message: "Image upload complete",
+              success: true,
               result,
+            });
+          } catch (error) {
+            res.status(400).json({
+              message: "Error occurred while modifying user db info",
+              err,
               success: false,
             });
+          }
+        } else {
+          res.status(400).json({
+            message: "Error occurred while uploading image",
+            err,
+            result,
+            success: false,
+          });
         }
         if (fs.existsSync("./tmp")) fs.removeSync("./tmp");
         if (fs.existsSync("./tmp")) fs.removeSync("./tmp");
@@ -129,24 +121,18 @@ const deleteProfilePic = async (req, res) => {
       (err, result) => {
         if (!err && result.result == "ok") {
           dbUser.profilePic = undefined;
-          dbUser
-            .save()
-            .then(() =>
-              res
-                .status(200)
-                .json({
-                  message: "User profile picture deleted",
-                  success: true,
-                })
-            );
+          dbUser.save().then(() =>
+            res.status(200).json({
+              message: "User profile picture deleted",
+              success: true,
+            })
+          );
         } else {
-          res
-            .status(400)
-            .json({
-              message: "Error occurred while removing profile picture",
-              success: false,
-              err,
-            });
+          res.status(400).json({
+            message: "Error occurred while removing profile picture",
+            success: false,
+            err,
+          });
         }
       }
     );
@@ -158,12 +144,10 @@ const fetchPic = async (req, res) => {
   if (dbUser.profilePic) {
     res.status(200).json({ image_url: dbUser.profilePic, success: true });
   } else {
-    res
-      .status(200)
-      .json({
-        message: "User does not have profile picture set",
-        success: false,
-      });
+    res.status(200).json({
+      message: "User does not have profile picture set",
+      success: false,
+    });
   }
 };
 

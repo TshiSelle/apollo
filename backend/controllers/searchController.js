@@ -28,7 +28,7 @@ const searchPages = async (req, res) => {
         ],
       };
 
-      const searchResults = await Pa.find(query, {
+      const searchResults = await Page.find(query, {
         __v: 0,
         score: { $meta: "textScore" },
       })
