@@ -148,33 +148,34 @@ const Navbar = () => {
             <img src={jslogo} className="jslogo" />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <Link to="/">
+          <Link to="/" onClick={() => changelinkColor("/")}>
               <Button
-                onClick={() => changelinkColor("/")}
+                
                 sx={{ my: 2, color: linkstate["/"], display: "block" }}
               >
                 Home
               </Button>
             </Link>
-            <Link to="/products">
+            <Link to="/products" onClick={() => changelinkColor("/products")}>
               <Button
-                onClick={() => changelinkColor("/products")}
+                
                 sx={{ my: 2, color: linkstate["/products"], display: "block" }}
               >
                 Products
               </Button>
             </Link>
-            <Link to="/pricing">
+            <Link to="/pricing" onClick={() => changelinkColor("/pricing")}>
               <Button
-                onClick={() => changelinkColor("/pricing")}
+              
+                
                 sx={{ my: 2, color: linkstate["/pricing"], display: "block" }}
               >
                 Pricing
               </Button>
             </Link>
-            <Link to="/blog">
+            <Link to="/blog" onClick={() => changelinkColor("/blog")}>
               <Button
-                onClick={() => changelinkColor("/blog")}
+                
                 sx={{ my: 2, color: linkstate["/blog"], display: "block" }}
               >
                 Blog
