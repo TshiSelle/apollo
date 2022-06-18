@@ -13,10 +13,9 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import jslogo from "../../assets/javascript-svgrepo-com.svg";
 import "./nav.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const pages = ["Products", "Pricing", "Blog"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
@@ -37,8 +36,6 @@ const Navbar = () => {
     });
   };
 
-  
-
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   const [anchorElUser, setAnchorElUser] = React.useState(null);
 
@@ -57,8 +54,6 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
 
-  
-
   return (
     <AppBar
       position="static"
@@ -66,25 +61,24 @@ const Navbar = () => {
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-            <Link to="/">
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            onClick={() => changelinkColor("/")}
-            
-            sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
-            }}
-          >
-            <img src={jslogo} className="jslogo" />
-          </Typography>
+          <Link to="/">
+            <Typography
+              variant="h6"
+              noWrap
+              component="a"
+              onClick={() => changelinkColor("/")}
+              sx={{
+                mr: 2,
+                display: { xs: "none", md: "flex" },
+                fontFamily: "monospace",
+                fontWeight: 700,
+                letterSpacing: ".3rem",
+                color: "inherit",
+                textDecoration: "none",
+              }}
+            >
+              <img src={jslogo} className="jslogo" />
+            </Typography>
           </Link>
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
             <IconButton
@@ -148,17 +142,13 @@ const Navbar = () => {
             <img src={jslogo} className="jslogo" />
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-          <Link to="/" onClick={() => changelinkColor("/")}>
-              <Button
-                
-                sx={{ my: 2, color: linkstate["/"], display: "block" }}
-              >
+            <Link to="/" onClick={() => changelinkColor("/")}>
+              <Button sx={{ my: 2, color: linkstate["/"], display: "block" }}>
                 Home
               </Button>
             </Link>
             <Link to="/products" onClick={() => changelinkColor("/products")}>
               <Button
-                
                 sx={{ my: 2, color: linkstate["/products"], display: "block" }}
               >
                 Products
@@ -166,8 +156,6 @@ const Navbar = () => {
             </Link>
             <Link to="/pricing" onClick={() => changelinkColor("/pricing")}>
               <Button
-              
-                
                 sx={{ my: 2, color: linkstate["/pricing"], display: "block" }}
               >
                 Pricing
@@ -175,7 +163,6 @@ const Navbar = () => {
             </Link>
             <Link to="/blog" onClick={() => changelinkColor("/blog")}>
               <Button
-                
                 sx={{ my: 2, color: linkstate["/blog"], display: "block" }}
               >
                 Blog
