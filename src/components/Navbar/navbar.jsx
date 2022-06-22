@@ -13,7 +13,7 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import jslogo from "../../assets/javascript-svgrepo-com.svg";
 import "./nav.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -54,10 +54,24 @@ const Navbar = () => {
     setAnchorElUser(null);
   };
 
+  const [navcolor, setNavcolor] = useState(false);
+  const changeBackground = () => {
+    if (window.scrollY >= 100) {
+      setNavcolor(true);
+    } else {
+      setNavcolor(false);
+    }
+  };
+  useEffect(() => {
+    changeBackground();
+    // adding the event when scroll change background
+    window.addEventListener('scroll', changeBackground);
+  });
+
   return (
     <AppBar
-      position="static"
-      style={{ backgroundColor: "var(--color-secondary)" }}
+      position="sticky"
+      style={{ backgroundColor: navcolor ? "var(--color-secondary)" : "black" }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

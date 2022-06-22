@@ -1,8 +1,10 @@
+import MainSubject from "./mainsubject";
 
 
 function Home() {
     return ( <>
-    This is Home Page</> );
+    <MainSubject />
+    </> );
 }
 
 export default Home;
