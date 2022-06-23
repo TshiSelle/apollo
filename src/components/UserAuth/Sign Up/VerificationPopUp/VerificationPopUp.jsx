@@ -14,12 +14,12 @@ const VerificationPopUp = () => {
     >
       <Toast.Header>
         <img
-          src='https://res.cloudinary.com/cloudloom/image/upload/v1653671627/logo/eireneFace_co9szd.png'
+          src='https://res.cloudinary.com/projectapollo/image/upload/v1655993017/Profiles/jslogo.png'
           className='rounded me-2'
-          alt='eirene logo'
+          alt='apollo logo'
           width='13'
         />
-        <strong className='me-auto'>Eirene</strong>
+        <strong className='me-auto'>Apollo</strong>
       </Toast.Header>
       <Toast.Body className='Light'>
         Hey, we sent you a verification link. Check your email!
