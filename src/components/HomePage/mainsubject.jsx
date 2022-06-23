@@ -18,7 +18,6 @@ function MainSubject() {
         </p>
         </div>
       </div>
-      <div className="bgimage"></div>
     </>
   );
 }
