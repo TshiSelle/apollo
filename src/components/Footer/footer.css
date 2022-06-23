@@ -1,4 +1,4 @@
-.footercontainer{
+.footer__container{
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -12,11 +12,11 @@
     padding-right: 1rem;
     background-color: var(--color-secondary);
 }
-.footerlogo{
+.footer__logo{
     width: 3rem;
     height: 3rem;
 }
-.footercontainer div{
+.footer__container div{
     display: flex;
     flex-direction: column;
     justify-content:flex-start ;
@@ -26,19 +26,19 @@
     max-height: 100vh;
     max-width: 10%;
 }
-.footercontainer div p{
+.footer__container div p{
     margin-bottom: 2.5%;
 }
-.footercontainer div p a{
+.footer__container div p a{
     text-decoration: none;
     color: white;
 }
-.footercontainer div h3{
+.footer__container div h3{
     margin-bottom: 20%;
 }
-.footercontainer div h2{
+.footer__container div h2{
     margin-bottom: 10%;
 }
-.footercontainer div img{
+.footer__container div img{
     margin-bottom: 10%;
 }

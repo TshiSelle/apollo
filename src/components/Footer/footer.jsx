@@ -4,9 +4,9 @@ import jslogo from "../../assets/javascript-svgrepo-com.svg";
 
 function Footer() {
   return (
-    <div className="footercontainer">
+    <div className="footer__container">
       <div>
-        <img className="footerlogo" src={jslogo} />
+        <img className="footer__logo" src={jslogo} />
         <h2>Apollo</h2>
         <p>Everything you need to know about JavaScript</p>
       </div>

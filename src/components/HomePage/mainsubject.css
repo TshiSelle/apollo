@@ -1,4 +1,4 @@
-.bgimage {
+.mainsubject {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,7 +9,7 @@
   background-position: center center;
   background-size: cover;
 }
-div hr{
+.mainsubject__hr{
   border: 0;
   clear:both;
   display:block;
@@ -19,7 +19,7 @@ div hr{
   margin-bottom: 1rem;
   margin-top: 1rem;
 }
-.container1 {
+.mainsubject__container {
   display: flex;
   flex-direction: column;
   justify-content: center;
