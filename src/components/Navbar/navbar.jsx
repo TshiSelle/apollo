@@ -71,7 +71,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="sticky"
-      style={{ backgroundColor: navcolor ? "var(--color-secondary)" : "black" }}
+      style={{ backgroundColor: navcolor ? "var(--color-secondary)" : "transparent" }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>

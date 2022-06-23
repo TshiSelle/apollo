@@ -39,6 +39,7 @@
     justify-content: space-around;
     align-items: center;
     text-align: center;
+    
 }
 .services__body div{
     display: flex;
@@ -48,3 +49,13 @@
     text-align: center;
     width: 20%;
 }
+.services__body div p{
+    width: 75%;
+}
+
+@media only screen and (max-width: 900px) {
+    .services__body div{
+        width: 100%;
+    }
+  }
+
