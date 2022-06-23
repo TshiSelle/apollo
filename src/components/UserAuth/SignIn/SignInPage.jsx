@@ -45,7 +45,11 @@ const LoginPage = () => {
           <SignInForm />
         </SectionContainer>
       </MainSection>
-      <StyledImage alt='SI img' rel='preconnect' publicId=''>
+      <StyledImage
+        alt='SI image'
+        rel='preconnect'
+        publicId='Profiles/Signinimg'
+      >
         <Transformation fetchFormat='auto' />
       </StyledImage>
     </MainContainer>
