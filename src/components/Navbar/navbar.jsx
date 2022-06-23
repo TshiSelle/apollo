@@ -165,7 +165,7 @@ const Navbar = () => {
               <Button
                 sx={{ my: 2, color: linkstate["/products"], display: "block" }}
               >
-                Products
+                Pages
               </Button>
             </Link>
             <Link to="/pricing" onClick={() => changelinkColor("/pricing")}>
