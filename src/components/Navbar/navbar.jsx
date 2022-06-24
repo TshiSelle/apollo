@@ -21,9 +21,10 @@ const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const Navbar = () => {
   const initialState = {
     "/": "var(--color-white)",
-    "/products": "var(--color-white)",
+    "/Pages": "var(--color-white)",
     "/pricing": "var(--color-white)",
     "/blog": "var(--color-white)",
+    "/contactUs" : "var(--color-white)",
   };
 
   const [linkstate, setLinkstate] = useState(initialState);
@@ -71,7 +72,7 @@ const Navbar = () => {
   return (
     <AppBar
       position="sticky"
-      style={{ backgroundColor: navcolor ? "var(--color-secondary)" : "transparent" }}
+      style={{ backgroundColor: navcolor ? "var(--color-secondary)" : "black" }}
     >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
@@ -126,14 +127,17 @@ const Navbar = () => {
               <MenuItem onClick={() => changelinkColor("/")}>
                 <Typography textAlign="center">Home</Typography>
               </MenuItem>
-              <MenuItem onClick={() => changelinkColor("/products")}>
-                <Typography textAlign="center">Products</Typography>
+              <MenuItem onClick={() => changelinkColor("/Pages")}>
+                <Typography textAlign="center">Pages</Typography>
               </MenuItem>
               <MenuItem onClick={() => changelinkColor("/pricing")}>
                 <Typography textAlign="center">Pricing</Typography>
               </MenuItem>
               <MenuItem onClick={() => changelinkColor("/blog")}>
                 <Typography textAlign="center">Blog</Typography>
+              </MenuItem>
+              <MenuItem onClick={() => changelinkColor("/contactUs")}>
+                <Typography textAlign="center">ContactUs</Typography>
               </MenuItem>
             </Menu>
           </Box>
@@ -161,9 +165,9 @@ const Navbar = () => {
                 Home
               </Button>
             </Link>
-            <Link to="/products" onClick={() => changelinkColor("/products")}>
+            <Link to="/Pages" onClick={() => changelinkColor("/Pages")}>
               <Button
-                sx={{ my: 2, color: linkstate["/products"], display: "block" }}
+                sx={{ my: 2, color: linkstate["/Pages"], display: "block" }}
               >
                 Pages
               </Button>
@@ -180,6 +184,13 @@ const Navbar = () => {
                 sx={{ my: 2, color: linkstate["/blog"], display: "block" }}
               >
                 Blog
+              </Button>
+            </Link>
+            <Link to="/contactUs" onClick={() => changelinkColor("/contactUs")}>
+              <Button
+                sx={{ my: 2, color: linkstate["/contactUs"], display: "block" }}
+              >
+                Contact Us
               </Button>
             </Link>
           </Box>
