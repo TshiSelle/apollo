@@ -25,6 +25,7 @@ function ContactUs() {
           inquiry or find the phone number you'd like to contact below.
         </p>
         <p>+961 123456</p>
+        <p>+961 654321</p>
       </div>
       <div className="contactus__right">
         {" "}
