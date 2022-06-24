@@ -14,7 +14,8 @@ import MenuItem from "@mui/material/MenuItem";
 import jslogo from "../../assets/javascript-svgrepo-com.svg";
 import "./nav.css";
 import { useState,useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
+
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -27,6 +28,9 @@ const Navbar = () => {
     "/contactUs" : "var(--color-white)",
   };
 
+  
+  let navigate = useNavigate();
+
   const [linkstate, setLinkstate] = useState(initialState);
 
   const changelinkColor = (x) => {
@@ -34,7 +38,11 @@ const Navbar = () => {
     setLinkstate({
       ...initialState,
       [x]: "var(--color-primary)",
+      
     });
+    
+    navigate(x , { replace: true });
+
   };
 
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -124,8 +132,8 @@ const Navbar = () => {
                 display: { xs: "block", md: "none" },
               }}
             >
-              <MenuItem onClick={() => changelinkColor("/")}>
-                <Typography textAlign="center">Home</Typography>
+              <MenuItem  onClick={() => changelinkColor("/")}>
+                <Typography  textAlign="center">Home</Typography>
               </MenuItem>
               <MenuItem onClick={() => changelinkColor("/Pages")}>
                 <Typography textAlign="center">Pages</Typography>

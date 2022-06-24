@@ -29,7 +29,7 @@ function ContactUs() {
       </div>
       <div className="contactus__right">
         {" "}
-        <ThemeProvider className="test" theme={theme}>
+        <ThemeProvider theme={theme}>
           <div className="contactus__row1">
             <TextField
               className="contactus__input"
