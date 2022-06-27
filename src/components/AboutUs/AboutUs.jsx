@@ -1,5 +1,13 @@
+import Introduction from "./introduction";
+import Purpose from './purpose';
+import Sponsor from "./sponsor";
+
 function AboutUs() {
-    return ( <>This is about us</> );
+    return ( <div className="aboutus">
+            <Introduction />
+            <Purpose />
+            <Sponsor />
+         </div> );
 }
 
 export default AboutUs;

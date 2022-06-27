@@ -1,0 +1,41 @@
+.purpose{
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 60vh;;
+    color: white;
+}
+.purpose__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    width: 50%;
+}
+.purpose__hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 40%;
+    background-color: white;
+    height: 0.1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .purpose__body{
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .purpose__hr{
+        width:90%;
+    }
+  }

@@ -1,0 +1,40 @@
+.introduction{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    min-height: 60vh;;
+    color: black;
+}
+.introduction__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 5%;
+    width: 50%;
+}
+.introduction__hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 35%;
+    background-color: black;
+    height: 0.1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+  }
+  .introduction__body{
+    text-align: center;
+    width: 50%;
+    margin-bottom: 5%;
+  }
+
+  @media only screen and (max-width: 900px) {
+    .introduction__hr{
+        width:60%;
+    }
+  }

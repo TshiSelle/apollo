@@ -23,7 +23,7 @@ const Navbar = () => {
   const initialState = {
     "/": "var(--color-white)",
     "/Pages": "var(--color-white)",
-    "/pricing": "var(--color-white)",
+    "/aboutUs": "var(--color-white)",
     "/blog": "var(--color-white)",
     "/contactUs" : "var(--color-white)",
   };
@@ -138,8 +138,8 @@ const Navbar = () => {
               <MenuItem onClick={() => changelinkColor("/Pages")}>
                 <Typography textAlign="center">Pages</Typography>
               </MenuItem>
-              <MenuItem onClick={() => changelinkColor("/pricing")}>
-                <Typography textAlign="center">Pricing</Typography>
+              <MenuItem onClick={() => changelinkColor("/aboutUs")}>
+                <Typography textAlign="center">About Us</Typography>
               </MenuItem>
               <MenuItem onClick={() => changelinkColor("/blog")}>
                 <Typography textAlign="center">Blog</Typography>
@@ -180,18 +180,20 @@ const Navbar = () => {
                 Pages
               </Button>
             </Link>
-            <Link to="/pricing" onClick={() => changelinkColor("/pricing")}>
-              <Button
-                sx={{ my: 2, color: linkstate["/pricing"], display: "block" }}
-              >
-                Pricing
-              </Button>
-            </Link>
+           
             <Link to="/blog" onClick={() => changelinkColor("/blog")}>
               <Button
                 sx={{ my: 2, color: linkstate["/blog"], display: "block" }}
               >
                 Blog
+              </Button>
+              
+            </Link>
+            <Link to="/aboutUs" onClick={() => changelinkColor("/aboutUs")}>
+              <Button
+                sx={{ my: 2, color: linkstate["/aboutUs"], display: "block" }}
+              >
+                About Us
               </Button>
             </Link>
             <Link to="/contactUs" onClick={() => changelinkColor("/contactUs")}>
