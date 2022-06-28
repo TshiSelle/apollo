@@ -1,8 +1,9 @@
 import React from 'react';
+import Sidenav from './sidenav';
 
 
 function Pages() {
-    return ( <>This is pages</> );
+    return ( <div className='pages'><Sidenav /></div> );
 }
 
 export default Pages;

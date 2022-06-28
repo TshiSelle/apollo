@@ -1,0 +1,48 @@
+.sidenav__container{
+  position: fixed;
+  overflow: auto;
+  margin: 0 auto;
+  min-height: 100vh;
+  max-height: 100vh;
+  width: 25vw;
+  background-color: black;
+  overflow-y: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+.sidenav__container a {
+margin-top: 1rem;
+margin-left: 1rem;
+}
+.sidenav__button{
+  position: fixed;
+  margin-left: 1%;
+  margin-top: 1%;
+  color: var(--color-primary);
+}
+.sidenav__close{
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+
+@media only screen and (max-width: 900px) {
+  .sidenav__container {
+      width: 40vw;
+  }
+  .sidenav__button{
+    margin-top: 3%;
+    margin-left: 3%;
+  }
+  .sidenav__close{
+    position: relative;
+    left: 5%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .sidenav__container {
+      width: 50vw;
+  }
+}
