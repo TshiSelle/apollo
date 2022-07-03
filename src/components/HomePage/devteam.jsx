@@ -1,6 +1,6 @@
 import React from 'react';
 import './devteam.css';
-import jslogo from '../../assets/javascript-svgrepo-com.svg';
+import OmarPic from '../../assets/omar-presentation.JPG';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import LanguageIcon from '@mui/icons-material/Language';
@@ -45,7 +45,7 @@ function Devteam() {
           </div>
         </div>
         <div className='devteam__card'>
-          <img src={jslogo} className='devteam__logo' />
+          <img src={OmarPic} className='devteam__logo' />
           <h3>Omar Houssami</h3>
           <p>Full Stack Developer</p>
           <p>AstroLabs</p>
