@@ -1,5 +1,5 @@
 import React, { useReducer, useMemo, useCallback, useContext, useEffect } from 'react';
-import { IsUserTokenValid } from '../api/ApiClient';
+import { IsUserTokenValid } from '../api/apiClient';
 
 const AuthContext = React.createContext();
 
