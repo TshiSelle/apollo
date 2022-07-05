@@ -1,6 +1,6 @@
 import React, { useReducer, useMemo, useCallback, useContext, useEffect, useState } from "react";
 import { useAuthenticator } from "./AuthContext";
-import { UpdatePage, GetUserPages, DeletePage } from "../api/ApiClient";
+import { UpdatePage, GetUserPages, DeletePage } from "../api/apiClient";
 const PageContext = React.createContext();
 
 const reducer = (state, action) => {
