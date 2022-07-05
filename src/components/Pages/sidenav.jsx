@@ -7,6 +7,7 @@ import Content from './content';
 
 function Sidenav() {
   const [open,setOpen] = useState(false);
+  const [test,setTest] = useState("First text");
 
   return (
     <div class="sidenav">
@@ -15,8 +16,8 @@ function Sidenav() {
       </div>
       <div  className="sidenav__container" style={{display: open ? '' : 'none' }}>
         <CloseIcon className="sidenav__close"  onClick={() => setOpen(false)} />
-        <a>variables in javascript</a>
-        <a>asdasd</a>
+        <a  onClick={() => setTest("Variables in javascript")}>variables in javascript</a>
+        <a onClick={() => setTest("asdada in javascript")}>asdasd</a>
         <a>sdfmsasd</a>
         <a>asdasd</a>
         <a>sdfmsasd</a>
@@ -44,7 +45,7 @@ function Sidenav() {
         <a>sdfmsasd</a>
         <a>asdasd</a>
       </div>
-        <Content name="Hello"  />
+        <Content name={test}  />
       
     </div>
   );

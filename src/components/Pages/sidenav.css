@@ -1,4 +1,4 @@
-.sidenav__container{
+.sidenav__container {
   position: fixed;
   overflow: auto;
   margin: 0 auto;
@@ -12,16 +12,19 @@
   flex-direction: column;
 }
 .sidenav__container a {
-margin-top: 1rem;
-margin-left: 1rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
 }
-.sidenav__button{
+.sidenav__container a:hover {
+  color: var(--color-primary);
+}
+.sidenav__button {
   position: fixed;
   margin-left: 1%;
   margin-top: 1%;
   color: var(--color-primary);
 }
-.sidenav__close{
+.sidenav__close {
   position: absolute;
   right: 1rem;
   top: 1rem;
@@ -29,13 +32,13 @@ margin-left: 1rem;
 
 @media only screen and (max-width: 900px) {
   .sidenav__container {
-      width: 40vw;
+    width: 40vw;
   }
-  .sidenav__button{
+  .sidenav__button {
     margin-top: 3%;
     margin-left: 3%;
   }
-  .sidenav__close{
+  .sidenav__close {
     position: relative;
     left: 5%;
   }
@@ -43,6 +46,6 @@ margin-left: 1rem;
 
 @media only screen and (max-width: 600px) {
   .sidenav__container {
-      width: 50vw;
+    width: 50vw;
   }
 }
