@@ -8,7 +8,7 @@ const AboutUs = () => {
     <Main>
       <BgContainer>
         <AboutUsContainer>
-          <AboutUsImage publicId={"logo/logo512_krj93a.svg"} alt="eirene_logo">
+          <AboutUsImage publicId={"logo/logo512_krj93a.svg"} alt="Apollo_logo">
             <Transformation fetchFormat="auto" />
           </AboutUsImage>
 

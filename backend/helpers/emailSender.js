@@ -123,7 +123,7 @@ Your account will be fully deactivated at ${deactivationDate.toLocaleString()}<b
 If you change your mind before then, feel free to cancel your account deactivation <br/>
 in your profile.</p> <br/>
 <p style="margin-top: 20px; font-size: 16px;">We loved having you with us,</p>
-<p style="margin: 5px 15px 15px 15px; font-size: 16px;">The Eirene Team</p>`,
+<p style="margin: 5px 15px 15px 15px; font-size: 16px;">The Apollo Team</p>`,
   };
 
   Transport.sendMail(mailOptions, (error, response) => {
