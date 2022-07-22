@@ -1,0 +1,42 @@
+.mb-3 {
+  display: grid;
+  font-family: FuturaLight;
+}
+
+.input {
+  margin-bottom: 1rem;
+}
+
+.email-input {
+  padding: 0.375rem 0.75rem;
+  height: 54px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+  color: #495057;
+  font-size: 1rem;
+}
+
+.email-input:focus {
+  outline: none;
+}
+
+.mb-3 .submit-button,
+.signup-form .submit-button {
+  cursor: pointer;
+  height: 54px;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  background-color: #edbec4 !important;
+  color: #000000;
+  width: 100%;
+}
+
+.mb-3 .submit-button:hover,
+.mb-3 .submit-button:focus,
+.signup-form .submit-button:hover,
+.signup-form .submit-button:focus {
+  background-color: #eeb6bd !important;
+  color: #ffffff !important;
+}
