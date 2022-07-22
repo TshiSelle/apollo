@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { useAuthenticator } from "../../../context/AuthContext";
 import { useUser } from "../../../context/UserContext";
-import { GetUserInfo, GetUserPicture, ReactivateAccount, UploadProfilePicture, ChangeName } from "../../../api/ApiClient";
+import { GetUserInfo, GetUserPicture, ReactivateAccount, UploadProfilePicture, ChangeName } from "../../../api/apiClient";
 import { Link } from "react-router-dom";
 import { Image, Transformation } from "cloudinary-react";
 import { Alert, Button } from "react-bootstrap";
@@ -84,7 +84,7 @@ const ProfilePage = () => {
   const handleNameChange = () => {
     ChangeName(firstName, lastName, authToken).then((response) => {
       if (response.data.success) {
-		  setUser({...user, fname: firstName, lname: lastName})
+        setUser({ ...user, fname: firstName, lname: lastName })
         setIsEdit(false);
       }
     });

@@ -3,7 +3,7 @@ import SignUpForm from "./SignUpForm";
 import styled from "styled-components";
 import { useAuthenticator } from "../../../context/AuthContext";
 import { useNavigate, Link } from "react-router-dom";
-import CheckEmailModal from "./verify/CheckEmailModal";
+import CheckEmailModal from "./Verify/CheckEmailModal";
 import { Image, Transformation } from "cloudinary-react";
 
 const SignUpPage = () => {

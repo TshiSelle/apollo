@@ -1,7 +1,7 @@
 import React, { useCallback, useReducer } from "react";
 import styled from "styled-components";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { ContactSupportExternal } from "../../api/ApiClient";
+import { ContactSupportExternal } from "../../api/apiClient";
 import {
   validateName,
   validateEmail,

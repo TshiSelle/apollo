@@ -12,12 +12,11 @@ import { AuthProvider } from "./context/AuthContext";
 import NavBar from "./components/HomePage/NavBar";
 import SiteFooter from "./components/HomePage/Footer";
 import { PageProvider } from "./context/PageContext";
-import VerifyAccount from "./components/Profile/SignUp/verify/VerifyAccount";
+import VerifyAccount from "./components/Profile/SignUp/Verify/VerifyAccount";
 import { UserProvider } from "./context/UserContext";
 import { CloudinaryContext } from "cloudinary-react";
 import ContactUsRoute from "./components/ContactUs/ContactUsRoute";
 import NotFoundRoute from "./components/NotFound/NotFoundRoute";
-import Footer from "./components/AboutUs/AboutUs";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ScrollToTop from "./components/ScrollToTop/ScropllToTop";
 

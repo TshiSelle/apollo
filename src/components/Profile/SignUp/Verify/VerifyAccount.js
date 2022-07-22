@@ -1,7 +1,7 @@
 import React, { useEffect, useReducer, useState } from "react";
 import { Alert } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
-import { IsVerificationTokenValid } from "../../../../api/ApiClient";
+import { IsVerificationTokenValid } from "../../../../api/apiClient";
 import LoadingSpinner from "../../../LoadingSpinner/LoadingSpinner";
 import "./verifyacc.css";
 

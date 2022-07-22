@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useReducer } from "react";
 import { Alert, Button, Form } from "react-bootstrap";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
-import { SendEmail } from "../../../../api/ApiClient";
+import { SendEmail } from "../../../../api/apiClient";
 import { useAuthenticator } from "../../../../context/AuthContext";
 import { validateEmail } from "../../../../validators/validators";
 import "./forgotPassStyle.css";

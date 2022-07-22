@@ -9,7 +9,7 @@ import { useParams, useNavigate, Link } from "react-router-dom";
 import {
   PasswordResetWithToken,
   IsEmailTokenValid,
-} from "../../../../api/ApiClient";
+} from "../../../../api/apiClient";
 import "./forgotPassStyle.css";
 
 const reducer = (state, action) => {

@@ -1,6 +1,6 @@
 import React, { useCallback, useState, useRef, useEffect } from "react";
 import { usePage } from "../../context/PageContext";
-import { CreatePage } from "../../api/ApiClient";
+import { CreatePage } from "../../api/apiClient";
 import { useAuthenticator } from "../../context/AuthContext";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";

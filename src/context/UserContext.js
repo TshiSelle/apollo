@@ -10,7 +10,7 @@ import {
   GetUserInfo,
   GetUserPicture,
   DeactivateAccount,
-} from "../api/ApiClient";
+} from "../api/apiClient";
 
 const UserContext = React.createContext();
 const KEY = "user_data";

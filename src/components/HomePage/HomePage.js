@@ -1,7 +1,7 @@
 import { Image, Transformation } from "cloudinary-react";
 import React, { useState } from "react";
 import styled from "styled-components";
-import { GetUserInfo } from "../../api/ApiClient";
+import { GetUserInfo } from "../../api/apiClient";
 import { useAuthenticator } from "../../context/AuthContext";
 import ContactUs from "../ContactUs/ContactUsRoute.js";
 import VerificationPopUp from "../Profile/SignUp/VerificationPopUp/VerificationPopUp";

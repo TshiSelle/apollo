@@ -1,10 +1,10 @@
 import React, { useReducer, useCallback, useState } from "react";
 import styled from "styled-components";
-import { SignUpApiCall } from "../../../api/ApiClient";
+import { SignUpApiCall } from "../../../api/apiClient";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Form, Alert } from "react-bootstrap";
 import { validateName, validatePassword, validateEmail, validateGender, validateConfirmPassword } from "../../../validators/validators";
-import "./signupStyle.css";
+import "./signUpStyle.css";
 import { useAuthenticator } from "../../../context/AuthContext";
 import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
 

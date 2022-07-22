@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Form, Alert } from "react-bootstrap";
 import { validatePassword, validateName } from "../../../validators/validators";
 import "./loginStyle.css";
-import { LoginApiCall } from "../../../api/ApiClient";
+import { LoginApiCall } from "../../../api/apiClient";
 import { useAuthenticator } from "../../../context/AuthContext";
 import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
 

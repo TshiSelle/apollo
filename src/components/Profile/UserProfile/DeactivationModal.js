@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Modal } from "react-bootstrap";
 import styled from "styled-components";
-import { DeactivateAccount, ReactivateAccount } from "../../../api/ApiClient";
+import { DeactivateAccount, ReactivateAccount } from "../../../api/apiClient";
 import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
 import { useUser } from "../../../context/UserContext";
 
