@@ -8,11 +8,11 @@ const AboutUs = () => {
     <Main>
       <BgContainer>
         <AboutUsContainer>
-          <AboutUsImage publicId={"logo/logo512_krj93a.svg"} alt="Apollo_logo">
+          <AboutUsImage  publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1655993017/Profiles/jslogo.png"} alt="Apollo_logo">
             <Transformation fetchFormat="auto" />
           </AboutUsImage>
 
-          <AboutUsHeader>About Us</AboutUsHeader>
+          <AboutUsHeader style={{marginTop:"1rem"}}>About Us</AboutUsHeader>
 
           <AboutUsText>
             Eirene is a self-care therapy application designed to create a
@@ -76,7 +76,7 @@ const AboutUsImage = styled(Image)`
   }
 `;
 const BgContainer = styled.section`
-  background-image: url("https://res.cloudinary.com/cloudloom/image/upload/f_auto/v1653829090/samples/Profile/about%20us%20compressed.jpg");
+  background-image: url("https://res.cloudinary.com/projectapollo/image/upload/v1658755099/Profiles/nasa_nqs9lo.jpg");
   background-size: cover;
   background-position: center;
   height: 100vh;

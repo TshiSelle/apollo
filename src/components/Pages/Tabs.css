@@ -58,7 +58,7 @@
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
-  background-color: #e1ebd5;
+  background-color: var(--color-primary);
 }
 
 .scroll::-webkit-scrollbar {

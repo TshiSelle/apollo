@@ -1,17 +1,38 @@
+:root {
+  --color-bg: #e5e5e5;
+  --color-secondary: #14213d;
+  --color-primary: #f7df1e;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #ffffff;
+  --color-light: rgba(20, 33, 61, 0.6);
+  
+
+  --transition: all 280ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+.navbar_header{
+  background-color: var(--color-secondary) !important;
+}
+
+
 .navlink {
   font-size: 15px;
   text-decoration: none;
-  color: #212529;
+  color: var(--color-white);
   transition: color 0.2s linear;
 }
 
 .navlink:hover {
-  color: #8da86d;
+  color: var(--color-primary);
   transition: color 0.2s linear;
 }
 
 .active {
-  color: #8da86d;
+  color: var(--color-primary);
 }
 
 .btn-primary {
@@ -28,7 +49,7 @@
 }
 
 .dropdown-toggle::after {
-  color: #bbd69f;
+  color: var(--color-primary);
   font-family: 'icomoon';
   content: '\f078';
   position: absolute;
@@ -42,14 +63,14 @@
 }
 
 .dropdown-item {
-  color: #212529 !important;
+  color: var(--color-secondary) !important;
   font-size: 15px;
   transition: color 0.2s linear;
 }
 
 .dropdown-item:hover {
   background-color: unset;
-  color: #8da86d !important;
+  color: var(--color-primary) !important;
   transition: color 0.2s linear;
 }
 
@@ -59,7 +80,7 @@
 
 /* responsiveness */
 .hamburger-menu:after {
-  color: #212529;
+  color: var(--color-primary);
   font-family: 'icomoon';
   content: '\e5d2';
   position: absolute;
@@ -70,7 +91,7 @@
 }
 
 .close-menu:after {
-  color: #212529;
+  color: var(--color-primary);
   font-family: 'icomoon';
   content: '\e5cd';
   position: absolute;
@@ -102,11 +123,14 @@
     top: 13px;
     right: 95px;
   }
+  .navlink {
+    color: var(--color-secondary);
+  }
 }
 
 /* footer */
 .footer-link:hover {
-  color: #8da86d;
+  color: var(--color-primary);
 }
 
 #menu_items {

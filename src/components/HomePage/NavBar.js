@@ -27,7 +27,7 @@ const NavBar = () => {
     }
   }, [width]);
   return (
-    <Header pathname={location.pathname}>
+    <Header className="navbar_header" pathname={location.pathname}>
       <div className="hamburger-menu" onClick={showNavItems}></div>
 
       <Nav ref={nav} className="menu_items" id="menu_items">
@@ -45,7 +45,7 @@ const NavBar = () => {
 
         <Dropdown className="btn-primary">
           <Dropdown.Toggle>
-            <StyledImage publicId={userImage ? userImage : "Profiles/avatar_navbar"} alt="profile">
+            <StyledImage publicId={userImage ? userImage : "https://res.cloudinary.com/projectapollo/image/upload/e_colorize:100,co_rgb:ffffff/v1658469975/Profiles/avatar_navbar.png"} alt="profile">
               <Transformation fetchFormat="auto" />
             </StyledImage>
           </Dropdown.Toggle>

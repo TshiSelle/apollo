@@ -28,10 +28,10 @@ const HomePage = () => {
 
   return (
     <Container>
-      <GreenBackground></GreenBackground>
+      <GreenBackground ></GreenBackground>
 
       {showPopUp && <VerificationPopUp />}
-      <Main>
+      <Main >
         <BannerSection>
           <BnHeader>Project: Apollo</BnHeader>
           <BnDescription>From developers to developers</BnDescription>
@@ -60,32 +60,35 @@ const HomePage = () => {
         <MediFlex>
           <MediItem>
             <MediImage
-              publicId={"Provision/home-learn.svg"}
+            className="images"
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745461/Provision/home-learn.svg"}
               alt="Learning"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for anxiety</MediName>
+            <MediName className="mediname">10 minute meditation for anxiety</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Provision/home-interview.svg"}
+              className="images"
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745424/Provision/home-interview.svg"}
               alt="Interview"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for sleep</MediName>
+            <MediName className="mediname">10 minute meditation for sleep</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Provision/home-tip.svg"}
+            className="images"
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745431/Provision/home-tip.svg"}
               alt="Tips"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for stress</MediName>
+            <MediName className="mediname">10 minute meditation for stress</MediName>
           </MediItem>
         </MediFlex>
         <MediPara>Meditations can be found in the media player</MediPara>
@@ -108,7 +111,7 @@ const Container = styled.div`
 `;
 
 const GreenBackground = styled.div`
-  background-color: #e1ebd5;
+  background-color: rgb(247,223,30,0.8);
   height: 1101px;
   width: 100%;
   position: absolute;
@@ -122,6 +125,7 @@ const GreenBackground = styled.div`
 
 const Main = styled.main`
   width: 90%;
+  
   margin: 0 auto;
   display: grid;
   @media (max-width: 991px) {
@@ -197,7 +201,7 @@ const RaDescription = styled.p`
 `;
 
 const MeditationSection = styled.section`
-  background-color: #e1ebd5;
+  background-color: #e5e5e5;
   display: grid;
   justify-items: center;
   margin-top: 150px;
