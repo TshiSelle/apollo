@@ -11,6 +11,7 @@ import {
   IsEmailTokenValid,
 } from "../../../../api/apiClient";
 import "./forgotPassStyle.css";
+import e from "cors";
 
 const reducer = (state, action) => {
   // These cases are taken into consideration by the dispatches used in the useCallbacks down below,
@@ -102,7 +103,7 @@ const ForgotPasswordResetForm = () => {
   );
   const resetUserPassword = useCallback(() => {
     // this prevents auto refresh onsubmit
-    event.preventDefault();
+    e.preventDefault();
     if (waiting || finished) return;
     const passwordValidation = validatePassword(password);
     if (!passwordValidation.success) {

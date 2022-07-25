@@ -7,6 +7,7 @@ import { validateName, validatePassword, validateEmail, validateGender, validate
 import "./signUpStyle.css";
 import { useAuthenticator } from "../../../context/AuthContext";
 import LoadingSpinner from "../../LoadingSpinner/LoadingSpinner";
+import e from "cors";
 
 const reducer = (state, action) => {
   // These cases are taken into consideration by the dispatches used in the useCallbacks down below,
@@ -135,7 +136,7 @@ const SignUpForm = ({ handleModal }) => {
 
   const submitUser = useCallback(() => {
     // this prevents auto refresh onsubmit
-    event.preventDefault();
+    e.preventDefault();
     // We should validate the users input THEN call the api to register user here...
     if (waiting || finished) return;
     const firstNameValidation = validateName(firstName, "First name");
