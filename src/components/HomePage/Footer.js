@@ -7,7 +7,7 @@ const SiteFooter = () => {
   return (
     <FooterContainer>
       <FooterGrid>
-        <FooterHeader>Project: APollo</FooterHeader>
+        <FooterHeader>Project: Apollo</FooterHeader>
 
         <FooterAddress>
           AstroLabs <br />
@@ -27,14 +27,9 @@ const SiteFooter = () => {
             Home
           </StyledLink>{" "}
           |
-          <StyledLink to={"/find-therapists"} className="footer-link">
+          <StyledLink to={"/Page"} className="footer-link">
             {" "}
-            Therapists
-          </StyledLink>{" "}
-          |
-          <StyledLink to={"/Journal"} className="footer-link">
-            {" "}
-            Journal
+            Pages
           </StyledLink>{" "}
           |
           <StyledLink to={"/about"} className="footer-link">
