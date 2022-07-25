@@ -6,14 +6,14 @@ const crypto = require('crypto');
 const isEmpty = require('is-empty');
 
 const { User } = require('../models/user');
-const { sendEmailVerification, sendEmailResetPass, sendDeactivationEmail } = require('../helperFunctions/emailSender');
+const { sendEmailVerification, sendEmailResetPass, sendDeactivationEmail } = require('../helpers/emailSender');
 const {
 	validateLoginInput,
 	validateRegisterInput,
 	validatePassChangeInput,
 	validateEmail,
 	validatePassResetInput,
-} = require('../helperFunctions/inputValidation');
+} = require('../helpers/inputValidation');
 
 dotenv.config();
 
@@ -266,7 +266,7 @@ const resetPass = async (req, res) => {
 			passResetTokenExpirationDate: { $gt: Date.now() },
 		});
 		if (dbUser) {
-			if (!bcrypt.compareSync(resetInfo.newPassword, dbUser.password)){
+			if (!bcrypt.compareSync(resetInfo.newPassword, dbUser.password)) {
 				bcrypt
 					.hash(resetInfo.newPassword, 10)
 					.then((hashedPassword) => {

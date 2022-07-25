@@ -1,6 +1,6 @@
 const isEmpty = require('is-empty');
 const { Page } = require('../models/page');
-const { validateSearchInput } = require('../helperFunctions/inputValidation');
+const { validateSearchInput } = require('../helpers/inputValidation');
 
 const searchPages = async (req, res) => {
 	let { searchString, pageNum, title } = req.query;

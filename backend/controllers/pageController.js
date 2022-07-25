@@ -1,5 +1,5 @@
 const isEmpty = require('is-empty');
-const { validateObjectID } = require('../helperFunctions/inputValidation');
+const { validateObjectID } = require('../helpers/inputValidation');
 const { Page } = require('../models/page');
 
 const addPage = async (req, res) => {

@@ -14,7 +14,7 @@ const profileRoutes = require('./routes/profileRoutes');
 const page = require('./routes/pageRoutes');
 const { register } = require('./controllers/accountController');
 const verifyJWT = require('./middleware/TokenVerification');
-const { verifyLoggedInUser } = require('./helperFunctions/verifyToken');
+const { verifyLoggedInUser } = require('./helpers/verifyToken');
 const { getUser } = require('./controllers/userController');
 
 //configuring the environment variable for the mongo URI string

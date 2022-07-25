@@ -1,7 +1,7 @@
 const isEmpty = require('is-empty');
 const { User } = require('../models/user');
-const { sendEmailSupport } = require('../helperFunctions/emailSender');
-const { validateEmail } = require('../helperFunctions/inputValidation');
+const { sendEmailSupport } = require('../helpers/emailSender');
+const { validateEmail } = require('../helpers/inputValidation');
 /* incoming data: supportMessage */
 
 const fromUser = async (req, res) => {
