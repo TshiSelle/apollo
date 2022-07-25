@@ -60,32 +60,32 @@ const HomePage = () => {
         <MediFlex>
           <MediItem>
             <MediImage
-              publicId={"Provision/home-learn.svg"}
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745461/Provision/home-learn.svg"}
               alt="Learning"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for anxiety</MediName>
+            <MediName>Learning new stuff everyday</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Provision/home-interview.svg"}
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745424/Provision/home-interview.svg"}
               alt="Interview"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for sleep</MediName>
+            <MediName>Common interview questions</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Provision/home-tip.svg"}
+              publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658745431/Provision/home-tip.svg"}
               alt="Tips"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for stress</MediName>
+            <MediName>Tips for improvement</MediName>
           </MediItem>
         </MediFlex>
         <MediPara>Meditations can be found in the media player</MediPara>

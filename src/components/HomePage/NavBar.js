@@ -45,7 +45,7 @@ const NavBar = () => {
 
         <Dropdown className="btn-primary">
           <Dropdown.Toggle>
-            <StyledImage publicId={userImage ? userImage : "Profiles/avatar_navbar"} alt="profile">
+            <StyledImage publicId={userImage ? userImage : "https://res.cloudinary.com/projectapollo/image/upload/v1658469975/Profiles/avatar_navbar.png"} alt="profile">
               <Transformation fetchFormat="auto" />
             </StyledImage>
           </Dropdown.Toggle>
