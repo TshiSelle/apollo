@@ -29,20 +29,30 @@ const Page = () => {
           <PageEntries setMessage={setMessage} setError={setError} />
         </>
       ) : (
-        <LoggedOutPage>
+        <>
           <PageBanner>
-            <BannerHeader>You Are Not Logged In</BannerHeader>
-            <BannerPara>Please login to access your page.</BannerPara>
+            <BannerHeader>Page</BannerHeader>
+            <BannerPara>
+              Let's Start learning !
+            </BannerPara>
           </PageBanner>
-          <ButtonHolder>
-            <Link to="/SignIn">
-              <SignInButton>Sign In</SignInButton>
-            </Link>
-            <Link to="/SignUp">
-              <SignUpButton>Sign Up</SignUpButton>
-            </Link>
-          </ButtonHolder>
-        </LoggedOutPage>
+
+          <PageEntries setMessage={setMessage} setError={setError} />
+        </>
+        // <LoggedOutPage>
+        //   <PageBanner>
+        //     <BannerHeader>You Are Not Logged In</BannerHeader>
+        //     <BannerPara>Please login to access your page.</BannerPara>
+        //   </PageBanner>
+        //   <ButtonHolder>
+        //     <Link to="/SignIn">
+        //       <SignInButton>Sign In</SignInButton>
+        //     </Link>
+        //     <Link to="/SignUp">
+        //       <SignUpButton>Sign Up</SignUpButton>
+        //     </Link>
+        //   </ButtonHolder>
+        // </LoggedOutPage>
         // : <PageEntries setMessage={setMessage} setError={setError} />
       )}
       {error ? (

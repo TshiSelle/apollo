@@ -60,8 +60,8 @@ const HomePage = () => {
         <MediFlex>
           <MediItem>
             <MediImage
-              publicId={"Meditations/meditation_lezixo.jpg"}
-              alt="meditation"
+              publicId={"Provision/home-learn.svg"}
+              alt="Learning"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
@@ -70,8 +70,8 @@ const HomePage = () => {
 
           <MediItem>
             <MediImage
-              publicId={"Meditations/10_min_meditation_for_sleep_a45ext.jpg"}
-              alt="meditation1"
+              publicId={"Provision/home-interview.svg"}
+              alt="Interview"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
@@ -80,8 +80,8 @@ const HomePage = () => {
 
           <MediItem>
             <MediImage
-              publicId={"Meditations/10_min_meditation_stress_iwvnuo.jpg"}
-              alt="meditation2"
+              publicId={"Provision/home-tip.svg"}
+              alt="Tips"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
@@ -131,7 +131,7 @@ const Main = styled.main`
 `;
 
 const BannerSection = styled.section`
-  background-image: url("https://res.cloudinary.com/cloudloom/image/upload/f_auto/v1650234147/samples/Profile/home-banner.jpg");
+  background-image: url("https://res.cloudinary.com/projectapollo/image/upload/v1658745451/Provision/home-laptop.jpg");
   height: 600px;
   background-repeat: no-repeat;
   background-size: cover;
