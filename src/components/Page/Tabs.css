@@ -1,0 +1,139 @@
+.react-tabs {
+  font-family: FuturaLight;
+  line-height: 1.5;
+  color: #212529;
+  min-height: 100vh;
+}
+
+/* entry body */
+.entry-title {
+  font-weight: bold;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.entry-body {
+  white-space: pre-wrap;
+}
+
+/* buttons */
+.new-page-button div::after {
+  content: '\f067';
+}
+
+.edit-entry-button div::after {
+  content: '\f040';
+}
+
+.delete-entry-button div::after {
+  content: '\f1f8';
+}
+
+.new-page-button div::after,
+.edit-entry-button div::after,
+.delete-entry-button div::after {
+  font-family: 'icomoon';
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.bodyAndButtonsContainer {
+  position: relative;
+  padding: 50px;
+  background-color: #f5f5f5;
+}
+
+.button-holder {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  display: grid;
+  background-color: #e1ebd5;
+  padding: 10px;
+  border-radius: 5px 0 0 5px;
+}
+
+/* tabs */
+.scroll {
+  overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+  background-color: #e1ebd5;
+}
+
+.scroll::-webkit-scrollbar {
+  height: 12px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background-color: #e1ebd5;
+}
+
+.react-tabs__tab-list {
+  border-bottom: none;
+  margin: 0;
+}
+
+.react-tabs__tab {
+  transition: 0.3s;
+  padding: 20px;
+}
+
+.react-tabs__tab:not(.react-tabs__tab--selected):hover {
+  background-color: #ecf3e3;
+}
+
+.react-tabs__tab--selected {
+  background-color: #ffffff;
+  border: 1px solid #e1ebd5;
+  border-radius: 0;
+  cursor: default;
+}
+
+/* responsive */
+@media (max-width: 991px) {
+  .entry-title {
+    font-size: 20px;
+  }
+
+  .bodyAndButtonsContainer {
+    padding: 20px 30px 20px 20px;
+  }
+
+  .react-tabs__tab {
+    padding: 15px;
+  }
+
+  .button-holder {
+    padding: 5px;
+  }
+}
+
+/* edit */
+.edit-header {
+  font-size: 30px;
+  padding: 15px;
+}
+
+.text-area {
+  padding: 0.375rem 0.75rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+  font-size: 1rem;
+}
+
+.text-area:focus {
+  box-shadow: 0 1px 2px 0 rgb(0, 0, 0, 0.1);
+}
+
+.submit-entry-button {
+  width: 120px;
+  margin: auto;
+}
