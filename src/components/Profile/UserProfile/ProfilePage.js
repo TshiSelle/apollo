@@ -200,7 +200,7 @@ const ProfilePage = () => {
                   {firstName} {lastName}
                 </UserPara>
 
-                <Button onClick={() => setIsEdit(true)} style={{ color: "#212529", fontWeight: "bold" }}>
+                <Button onClick={() => setIsEdit(true)} style={{ color: "#FFD700", fontWeight: "bold" }}>
                   Edit Name
                 </Button>
               </div>
@@ -285,7 +285,8 @@ const BannerPara = styled.p`
 `;
 
 const UserCard = styled.div`
-  background-color: #efd8db;
+  background-color: #54626F;
+  color:#ffffff;
   padding: 45px;
   width: 404px;
   justify-self: center;
