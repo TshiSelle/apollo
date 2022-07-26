@@ -93,6 +93,7 @@ const StyledImage = styled(Image)`
   width: 50%;
   object-fit: cover;
   object-position: right;
+  height: 100vh;
 
   @media (max-width: 991px) {
     grid-area: image;
