@@ -100,9 +100,9 @@ const ForgotPasswordResetForm = () => {
     (e) => dispatch({ type: "set-confirm-password", value: e.target.value }),
     []
   );
-  const resetUserPassword = useCallback(() => {
+  const resetUserPassword = useCallback((e) => {
     // this prevents auto refresh onsubmit
-    //event.preventDefault();
+    e.preventDefault();
     if (waiting || finished) return;
     const passwordValidation = validatePassword(password);
     if (!passwordValidation.success) {

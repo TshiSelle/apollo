@@ -43,7 +43,7 @@ const SignUpPage = () => {
                 className="tab signup signUpButton "
                 style={{
                   borderRadius: "0 0.25rem 0.25rem 0",
-                  backgroundColor: "#EDBEC4",
+                  backgroundColor: "#54626F",
                 }}
                 to={"/SignUp"}
               >

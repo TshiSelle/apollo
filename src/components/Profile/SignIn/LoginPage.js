@@ -25,7 +25,7 @@ const LoginPage = () => {
               className="tab login"
               style={{
                 borderRadius: "0.25rem 0 0 0.25rem",
-                backgroundColor: "#EDBEC4",
+                backgroundColor: "#54626F",
               }}
               to="/SignIn"
             >
@@ -132,5 +132,8 @@ const StyledLink = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   color: #ffffff;
+  &:hover {
+    background-color: #FFC000 !important;
+  }
 `;
 export default LoginPage;

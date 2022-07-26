@@ -146,9 +146,9 @@ const SignUpForm = ({ handleModal }) => {
   const setConfirmPassword = useCallback((e) => dispatch({ type: "set-confirm-password", value: e.target.value }), []);
   const setGender = useCallback((e) => dispatch({ type: "set-gender", value: e.target.value }), []);
 
-  const submitUser = useCallback(() => {
+  const submitUser = useCallback((e) => {
     // this prevents auto refresh onsubmit
-    //event.preventDefault();
+    e.preventDefault();
     // We should validate the users input THEN call the api to register user here...
     if (waiting || finished) return;
     const firstNameValidation = validateName(firstName, "First name");

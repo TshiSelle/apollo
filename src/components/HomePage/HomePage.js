@@ -91,32 +91,35 @@ const HomePage = () => {
         <MediFlex>
           <MediItem>
             <MediImage
+            className="images"
               publicId={"Provision/home-learn.svg"}
               alt="learn"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>0 level learning</MediName>
+            <MediName className="mediname">0 level learning</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
+            className="images"
               publicId={"Provision/home-practice.svg"}
               alt="practice"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>Practice Content</MediName>
+            <MediName className="mediname">Practice Content</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
+            className="images"
               publicId={"Provision/home-interview.svg"}
               alt="interview"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>Interview Tips and Tricks</MediName>
+            <MediName className="mediname">Interview Tips and Tricks</MediName>
           </MediItem>
         </MediFlex>
         <MediPara>All features will be coming soon</MediPara>

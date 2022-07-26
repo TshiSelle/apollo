@@ -78,9 +78,9 @@ const SignInForm = () => {
     []
   );
 
-  const loginUser = useCallback(() => {
+  const loginUser = useCallback((e) => {
     // this prevents auto refresh onsubmit
-    //event.preventDefault();
+    e.preventDefault();
     // We should validate the users input THEN call the api to login user here...
     if (waiting || finished) return;
     const usernameValidation = validateName(username, "Username");
