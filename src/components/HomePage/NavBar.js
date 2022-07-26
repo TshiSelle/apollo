@@ -45,7 +45,7 @@ const NavBar = () => {
 
         <Dropdown className="btn-primary">
           <Dropdown.Toggle>
-            <StyledImage publicId={userImage ? userImage : "samples/Profile/navbar-profile"} alt="profile">
+            <StyledImage publicId={userImage ? userImage : "Profiles/avatar_navbar"} alt="profile">
               <Transformation fetchFormat="auto" />
             </StyledImage>
           </Dropdown.Toggle>
