@@ -27,13 +27,13 @@
   border: none;
   border-radius: 0.25rem;
   font-size: 1rem;
-  background-color: #edbec4 !important;
+  background-color: rgba(255, 192, 0, 0.5) !important;
   color: #000000;
   width: 100%;
 }
 
 .mb-3 .submit-button:hover,
 .mb-3 .submit-button:focus, .signup-form .submit-button:hover, .signup-form .submit-button:focus {
-  background-color: #eeb6bd !important;
-  color: #ffffff !important;
+  background-color: rgba(255, 192, 0, 1) !important;
+  color: black !important;
 }

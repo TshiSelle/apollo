@@ -72,11 +72,11 @@
 }
 
 .link:hover {
-  color: #f5a490;
+  color: rgba(255, 192, 0, 1);
 }
 
 .loginButton:hover {
-  background-color: #edafb6 !important;
+  background-color: rgba(255, 192, 0, 1) !important;
 }
 
 .signUp:hover {

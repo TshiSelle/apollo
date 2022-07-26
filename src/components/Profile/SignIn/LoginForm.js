@@ -187,8 +187,8 @@ const SignInForm = () => {
               style={{
                 width: "100%",
                 margin: "3rem 0 0",
-                backgroundColor: "#edbec4",
-                color: "#ffffff",
+                backgroundColor: "rgba(255, 192, 0, 0.5)",
+                color: "#000000",
               }}
             >
               Login
