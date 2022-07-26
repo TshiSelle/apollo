@@ -43,38 +43,17 @@ const HomePage = () => {
           </ThImage>
 
           <ThDetails>
-            <ThHeader>Find The Therapist For You</ThHeader>
+            <ThHeader>Begin your Journey</ThHeader>
 
             <div>
               <ThPara>
-                Many people seek treatment from a therapist because they are
-                dealing with a personal dispute, relationship or family
-                problems, or a mental health condition such as depression,
-                stress, or anxiety. A therapist or psychologist is a
-                professional who has been trained to assist in the treatment of
-                mental or physical health issues.
+                Javascript is a programming language that has been used for decades. It’s how you make interactive websites, how you build mobile apps. And it’s how most of us interact with our smartphones’ virtual assistants like Siri and Alexa.
               </ThPara>
               <ThPara>
-                Finding the right therapist may be a time-consuming and
-                challenging process, and some people may be unsure where to
-                begin. It's not always easy to figure out what kind of therapist
-                is ideal for a given problem, and a therapist's ethics or
-                credentials are frequently a factor to consider.
+                To become proficient in any coding language, one needs to be familiar with the concepts of the particular language as well as syntax and algorithms- but when you already read many books and did lots of courses or one big course, you have to start getting experience and practice your new skills.
               </ThPara>
-              <ThPara>
-                Our directory is one of the safest sites to find a therapist
-                online because Eirene maintains high member criteria. All
-                therapists listed in our directory must have a graduate degree
-                and agree to follow the components of good therapy. They must
-                also have a professional license or reside in a state in which
-                it is permissibile to practice without one or as an intern under
-                supervision.
-              </ThPara>
-              <ThPara>
-                Finally, if you have any hesitations, you can always text
-                Eirene, your close friend. Because, in the end, she will always
-                be there for you, no matter what.
-              </ThPara>
+              <ThPara>The most important in the process is to create a code and understand how it works. This will help you to understand the theory that you already know from books, and teach you how to choose the best solutions.</ThPara>
+
             </div>
           </ThDetails>
         </TherapistSection>
@@ -83,7 +62,7 @@ const HomePage = () => {
       <MeditationSection>
         <MediHeader>Our Content</MediHeader>
         <MediPara>
-          Every journey hsa its beginning, why not start here ?<br />
+          Every journey has its beginning, why not start here ?<br />
           From "Hello World" to "npm run build". LET'S GO.
 
         </MediPara>
