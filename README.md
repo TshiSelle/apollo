@@ -1,6 +1,6 @@
 # Project-Apollo
 
-### From developer to developers
+### From developers to developers
 
 <img src="https://res.cloudinary.com/projectapollo/image/upload/v1655993017/Profiles/jslogo.png"  />
 
