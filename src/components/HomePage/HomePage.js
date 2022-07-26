@@ -33,12 +33,12 @@ const HomePage = () => {
       {showPopUp && <VerificationPopUp />}
       <Main>
         <BannerSection>
-          <BnHeader>Project: Eirene</BnHeader>
-          <BnDescription>Embrace Your Inner Peace</BnDescription>
+          <BnHeader>Project: Apollo</BnHeader>
+          <BnDescription>From developers to developers</BnDescription>
         </BannerSection>
 
         <TherapistSection>
-          <ThImage publicId={"samples/Profile/home-img1.jpg"} alt="hand">
+          <ThImage publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658815877/Provision/programming.gif"} alt="hand">
             <Transformation fetchFormat="auto" />
           </ThImage>
 
@@ -79,70 +79,6 @@ const HomePage = () => {
           </ThDetails>
         </TherapistSection>
 
-        <JournalSection>
-          <JrHeader>Why Journaling?</JrHeader>
-          <JrPara>It can help with</JrPara>
-
-          <JrImage publicId={"samples/Profile/arrow.png"} alt="arrow">
-            <Transformation fetchFormat="auto" />
-          </JrImage>
-          <JrSection>
-            <JrDetails className="journal-reason">
-              <div className="tell-me-why">
-                <div className="point1 reasons">
-                  <h5>Self-Discovery</h5>
-                  <p>
-                    We are constantly evolving. Journaling helps us to listen,
-                    bear witness to these changes, and simply get to know
-                    ourselves a whole lot better.
-                  </p>
-                </div>
-
-                <div className="point2 reasons">
-                  <h5>Sharpening Memory</h5>
-                  <p>
-                    Journaling boosts comprehension and increases working memory
-                    capacity.
-                  </p>
-                </div>
-                <div className="point3 reasons">
-                  <h5>Reducing Anxiety</h5>
-                  <p>
-                    Journaling can be a powerful tool for examining and shifting
-                    thoughts from anxious and ruminative to empowered and
-                    action-oriented.
-                  </p>
-                </div>
-              </div>
-
-              <div className="tell-me-why2">
-                <div className="point4 reasons">
-                  <h5>Processing Emotions</h5>
-                  <p>
-                    Journaling gives you the opportunity to process your
-                    emotions in a safe, contained space where difficult emotions
-                    become less overwhelming and easier to manage.
-                  </p>
-                </div>
-                <div className="point5 reasons">
-                  <h5>Reducing Stress</h5>
-                  <p>
-                    Journaling is a good-for-you habit that the lessens impact
-                    of physical stressors on your health.
-                  </p>
-                </div>
-
-                <div className="point6 reasons">
-                  <h5>Boosting Mood</h5>
-                  <p>
-                    Journaling can improve your mood and give you a greater
-                    sense of overall emotional well-being and happiness.
-                  </p>
-                </div>
-              </div>
-            </JrDetails>
-          </JrSection>
-        </JournalSection>
 
         <RadioSection>
           <RaHeader>Radio</RaHeader>
@@ -241,8 +177,8 @@ const Main = styled.main`
 `;
 
 const BannerSection = styled.section`
-  background-image: url("https://res.cloudinary.com/cloudloom/image/upload/f_auto/v1650234147/samples/Profile/home-banner.jpg");
-  height: 600px;
+  background-image: url("https://res.cloudinary.com/projectapollo/image/upload/v1658745451/Provision/home-laptop.jpg");
+  height: 800px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom;

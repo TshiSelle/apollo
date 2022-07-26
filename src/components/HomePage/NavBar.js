@@ -99,7 +99,6 @@ const Header = styled.header`
   font-family: FuturaLight;
   padding-bottom: 15px;
   z-index: 1;
-
   @media (max-width: 991px) {
     height: 73px;
   }
@@ -111,7 +110,6 @@ const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   height: 100%;
-
   @media (max-width: 991px) {
     display: unset;
     height: 100%;
