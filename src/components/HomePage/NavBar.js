@@ -119,6 +119,7 @@ const Nav = styled.nav`
     top: 0;
     right: 0;
     background-color: #000103;
+    color: #ffffff;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
