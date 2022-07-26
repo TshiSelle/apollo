@@ -123,7 +123,7 @@ const ProfilePage = () => {
             </BannerPara>
           </PageBanner>
 
-          <UserCard>
+          <UserCard >
             <form className="profile-pic-form">
               <div className="form-group">
                 <label htmlFor="upload-photo" className="label-upload">
@@ -286,6 +286,9 @@ const BannerPara = styled.p`
 
 const UserCard = styled.div`
   background-color: #54626F;
+  border-radius:25px 25px 25px 25px;
+  box-shadow: 5px 5px 5px 5px rgba(20, 33, 61, 0.6) !important;
+  margin-bottom:5%;
   color:#ffffff;
   padding: 45px;
   width: 404px;
