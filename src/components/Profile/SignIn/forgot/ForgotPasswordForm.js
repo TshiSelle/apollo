@@ -157,7 +157,7 @@ const MainContainer = styled.div`
       rgba(33, 37, 41, 0.3),
       rgba(33, 37, 41, 0.3)
     ),
-    url("https://res.cloudinary.com/cloudloom/image/upload/f_auto/v1650233581/samples/Profile/login-image.jpg");
+    url("https://res.cloudinary.com/projectapollo/image/upload/v1658832128/Provision/forgotpass_iz037b.gif");
   background-size: cover;
   height: 100vh;
   font-family: "Roboto", sans-serif;
@@ -180,7 +180,11 @@ const MainSection = styled.div`
 const FormContainer = styled.div`
   padding: 30px;
   border-radius: 0.25rem;
-  background-color: #f6f7fc;
+  background-color: rgba(246, 247, 252, 0.5);
+
+  &:hover {
+    background-color: rgba(246, 247, 252, 1);
+  }
 
   @media (max-width: 1007px) {
     width: 100%;

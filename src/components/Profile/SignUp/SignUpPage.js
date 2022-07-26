@@ -55,8 +55,8 @@ const SignUpPage = () => {
           </SectionContainer>
         </MainSection>
         <StyledImage
-          publicId={"samples/Profile/login-image.jpg"}
-          alt="Eirene plant"
+          publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658832601/Provision/signin-signup_knj21e.jpg"}
+          alt="Apollo SignUp"
           rel="preconnect"
         >
           <Transformation fetchFormat="auto" />
@@ -97,7 +97,7 @@ const StyledImage = styled(Image)`
   @media (max-width: 991px) {
     grid-area: image;
     width: 100%;
-    height: 200px;
+    height:60%;
   }
 `;
 
