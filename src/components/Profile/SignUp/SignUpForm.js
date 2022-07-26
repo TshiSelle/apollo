@@ -148,7 +148,7 @@ const SignUpForm = ({ handleModal }) => {
 
   const submitUser = useCallback(() => {
     // this prevents auto refresh onsubmit
-    event.preventDefault();
+    //event.preventDefault();
     // We should validate the users input THEN call the api to register user here...
     if (waiting || finished) return;
     const firstNameValidation = validateName(firstName, "First name");

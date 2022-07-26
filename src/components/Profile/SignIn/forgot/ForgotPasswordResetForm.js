@@ -102,7 +102,7 @@ const ForgotPasswordResetForm = () => {
   );
   const resetUserPassword = useCallback(() => {
     // this prevents auto refresh onsubmit
-    event.preventDefault();
+    //event.preventDefault();
     if (waiting || finished) return;
     const passwordValidation = validatePassword(password);
     if (!passwordValidation.success) {
