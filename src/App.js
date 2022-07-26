@@ -8,7 +8,6 @@ import ForgotPasswordForm from "./components/Profile/SignIn/forgot/ForgotPasswor
 import FullPageSpinner from "./components/spinner/FullPageSpinner";
 import Page from "./components/Page/Page";
 import ForgotPasswordResetForm from "./components/Profile/SignIn/forgot/ForgotPasswordResetForm";
-import SearchPages from "./components/Page/SearchPages";
 import { AuthProvider } from "./context/AuthContext";
 import NavBar from "./components/HomePage/NavBar";
 import SiteFooter from "./components/HomePage/Footer";
@@ -18,7 +17,6 @@ import { UserProvider } from "./context/UserContext";
 import { CloudinaryContext } from "cloudinary-react";
 import ContactUsRoute from "./components/ContactUs/ContactUsRoute";
 import NotFoundRoute from "./components/NotFound/NotFoundRoute";
-import Footer from "./components/AboutUs/AboutUs";
 import AboutUs from "./components/AboutUs/AboutUs";
 import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
@@ -27,39 +25,33 @@ const App = () => {
     <CloudinaryContext cloudName="cloudloom">
       <AuthProvider>
         <UserProvider>
-          <CalendarProvider>
-            <JournalProvider>
+          <PageProvider>
+            <Suspense fallback={<FullPageSpinner />}>
               <Suspense fallback={<FullPageSpinner />}>
-                <Suspense fallback={<FullPageSpinner />}>
-                  <Router>
-                    <NavBar />
-                    <MediaPlayer>
-                      <ScrollToTop>
-                        <Routes>
-                          {/* Every page we create needs to have a route so we can navigate to it,
+                <Router>
+                  <NavBar />
+                  <ScrollToTop>
+                    <Routes>
+                      {/* Every page we create needs to have a route so we can navigate to it,
                             Imitate the routes below with a proper path when adding a new page */}
-                          <Route path="/" element={<HomePage />} />
-                          <Route path="/Profile" element={<ProfilePage />} />
-                          <Route path="/SignUp" element={<SignUpPage />} />
-                          <Route path="/SignIn" element={<LoginPage />} />
-                          <Route path="/forgot-password" element={<ForgotPasswordForm />} />
-                          <Route path="/forgot-password/:username/:token" element={<ForgotPasswordResetForm />} />
-                          <Route path="/find-therapists" element={<SearchTherapists />} />
-                          <Route path="/therapist-description/:id" element={<TherapistDescription />} />
-                          <Route path="/verify/:username/:token" element={<VerifyAccount />} />
-                          <Route path="/Journal" element={<Journal />} />
-                          <Route path="/about" element={<AboutUs />} />
-                          <Route path="/contact" element={<ContactUsRoute />} />
-                          <Route path={"/*" || "/404"} element={<NotFoundRoute />} />
-                        </Routes>
-                      </ScrollToTop>
-                    </MediaPlayer>
-                    <SiteFooter />
-                  </Router>
-                </Suspense>
+                      <Route path="/" element={<HomePage />} />
+                      <Route path="/Profile" element={<ProfilePage />} />
+                      <Route path="/SignUp" element={<SignUpPage />} />
+                      <Route path="/SignIn" element={<LoginPage />} />
+                      <Route path="/forgot-password" element={<ForgotPasswordForm />} />
+                      <Route path="/forgot-password/:username/:token" element={<ForgotPasswordResetForm />} />
+                      <Route path="/verify/:username/:token" element={<VerifyAccount />} />
+                      <Route path="/Page" element={<Page />} />
+                      <Route path="/about" element={<AboutUs />} />
+                      <Route path="/contact" element={<ContactUsRoute />} />
+                      <Route path={"/*" || "/404"} element={<NotFoundRoute />} />
+                    </Routes>
+                  </ScrollToTop>
+                  <SiteFooter />
+                </Router>
               </Suspense>
-            </JournalProvider>
-          </CalendarProvider>
+            </Suspense>
+          </PageProvider>
         </UserProvider>
       </AuthProvider>
     </CloudinaryContext>

@@ -140,7 +140,7 @@ export function FilterPages(
   let title = pageTitle ? `&title=${pageTitle}` : ""; //pagetitle (string-anything)
   let pageNum = pageNumber ? `&pageNum=${pageNumber}` : ""; //number (preferably between 1-maxPageNum)
   return GetAxiosCall(
-    `/search?searchString=${query}${title}${tgender}${tdegree}${MinyearsOfExp}${MaxyearsOfExp}${pageNum}`
+    `/search?searchString=${query}${title}${pageNum}`
   );
 }
 

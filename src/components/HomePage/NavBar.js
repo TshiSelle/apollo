@@ -22,10 +22,10 @@ const NavBar = () => {
   });
 
   useEffect(() => {
-	  if (width > 991 && nav.current.style) {
-		  nav.current.style.width = null;
-	  }
-  },[width]);
+    if (width > 991 && nav.current.style) {
+      nav.current.style.width = null;
+    }
+  }, [width]);
   return (
     <Header pathname={location.pathname}>
       <div className="hamburger-menu" onClick={showNavItems}></div>
@@ -36,11 +36,8 @@ const NavBar = () => {
         <NavLink className={({ isActive }) => "navlink " + (isActive && "active")} to="/">
           Home
         </NavLink>
-        <NavLink className={({ isActive }) => "navlink " + (isActive && "active")} to="/find-therapists">
-          Therapists
-        </NavLink>
-        <NavLink className={({ isActive }) => "navlink " + (isActive && "active")} to="/Journal">
-          Journal
+        <NavLink className={({ isActive }) => "navlink " + (isActive && "active")} to="/Page">
+          Page
         </NavLink>
         <NavLink className={({ isActive }) => "navlink " + (isActive && "active")} to="/about">
           About Us
@@ -142,10 +139,10 @@ const StyledImage = styled(Image)`
 export default NavBar;
 
 function showNavItems() {
-	var menuItemsId = document.getElementById("menu_items");
-	if (!menuItemsId.style.width || menuItemsId.style.width == "0px") {
-		menuItemsId.style.width = "270px";
-	} else {
-		menuItemsId.style.width = "0px";
-	}
+  var menuItemsId = document.getElementById("menu_items");
+  if (!menuItemsId.style.width || menuItemsId.style.width == "0px") {
+    menuItemsId.style.width = "270px";
+  } else {
+    menuItemsId.style.width = "0px";
   }
+}

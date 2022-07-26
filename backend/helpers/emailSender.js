@@ -4,14 +4,16 @@ const nodemailer = require("nodemailer");
 const CLIENT_URL = process.env.NODE_ENV == "development" ? `http://localhost:${process.env.CLIENT_PORT}` : "";
 
 var Transport = nodemailer.createTransport({
-  service: "Gmail",
+  host: 'smtp.zoho.com',
+  port: 465,
+  secure: true, //ssl
   auth: {
-    user: "apollo.project04@gmail.com",
+    user: "apollo.project04@zohomail.com",
     pass: process.env.APOLLO_EMAIL_PASS,
   },
 });
 function sendEmailVerification(username, email, emailVerificationToken) {
-  let sender = "Apollo <apollo.project04@gmail.com>";
+  let sender = "Apollo <apollo.project04@zohomail.com>";
   var mailOptions = {
     from: sender,
     to: email,
@@ -45,8 +47,10 @@ function sendEmailVerification(username, email, emailVerificationToken) {
 
   Transport.sendMail(mailOptions, (error, res) => {
     if (error) {
-      res.status(400).json({ error: error.name + ": " + error.message });
-      console.log(error);
+      throw new Error(error.name + ": " + error.message);
+
+      console.log(res);
+
     } else {
       console.log("Email sent");
     }
@@ -54,7 +58,7 @@ function sendEmailVerification(username, email, emailVerificationToken) {
 }
 
 function sendEmailResetPass(email, username, passResetToken) {
-  let sender = "Apollo<apollo.project04@gmail.com>";
+  let sender = "Apollo<apollo.project04@zohomail.com>";
   var mailOptions = {
     from: sender,
     to: email,
@@ -97,7 +101,7 @@ function sendEmailSupport(dbSender, message) {
   let sender = dbSender.username ? `${dbSender.username} <${dbSender.email}>` : `<${dbSender.email}>`;
   var mailOptions = {
     from: sender,
-    to: "apollo.project04@gmail.com",
+    to: "apollo.project04@zohomail.com",
     subject: `Support message from ${dbSender.fname} ${dbSender.lname}`,
     text: message,
   };
@@ -114,7 +118,7 @@ function sendEmailSupport(dbSender, message) {
 
 function sendDeactivationEmail(dbUser) {
   const { email, deactivationDate, username } = dbUser;
-  let sender = "Apollo <apollo.project04@gmail.com>";
+  let sender = "Apollo <apollo.project04@zohomail.com>";
   var mailOptions = {
     from: sender,
     to: email,
