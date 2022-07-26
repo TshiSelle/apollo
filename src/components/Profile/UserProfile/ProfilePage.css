@@ -2,22 +2,23 @@
   width: 404px;
   justify-self: center;
   margin: 10px 0 100px;
-  background-color: #edbec4;
+  background-color: #000103;
   border: none;
   height: 54px;
-  color: #212529;
+  color: #ffffff;
   border-radius: 0.25rem;
 }
 
-.deactivate-acc-button:hover, .deactivate-acc-button:focus {
-  background-color: #edafb6;
+.deactivate-acc-button:hover,
+.deactivate-acc-button:focus {
+  background-color: #ffd700;
+  color: black;
 }
 
 .profile-pic-form {
   display: grid;
   justify-items: center;
   gap: 10px;
-  
 }
 
 .submit-pic-button {
@@ -46,16 +47,16 @@
 
 .name-change-textarea {
   border: unset;
-	border-radius: unset;
-	border-bottom: 1px solid #8d8d8d;
-	background-color: #efd8db;
+  border-radius: unset;
+  border-bottom: 1px solid #8d8d8d;
+  background-color: #efd8db;
   resize: none;
 }
 
 .name-change-textarea:focus {
   background-color: #efd8db;
-	border-bottom: 1px solid #8d8d8d;
-	box-shadow: unset;
+  border-bottom: 1px solid #8d8d8d;
+  box-shadow: unset;
   outline: unset;
 }
 
@@ -107,7 +108,7 @@
   width: 404px;
   justify-self: center;
   margin: 10px 0 100px;
-  background-color: #edbec4 !important;
+  background-color: #000103 !important;
   border: none;
   height: 54px;
   color: #212529 !important;
