@@ -15,21 +15,16 @@ const AboutUs = () => {
           <AboutUsHeader style={{ marginTop: "1rem" }}>About Us</AboutUsHeader>
 
           <AboutUsText>
-            Eirene is a self-care therapy application designed to create a
-            connection to mental health professionals as well as encourage
+            Apollo is an open-database progressive web application designed to build a
+            community of developers health professionals as well as encourage
             positive lifestyle practices. <br />
             <br />
-            Included in Eirene are a chat room to send messages to therapists,
-            journal feature to help you track your mood, a wide range of
-            meditations, and a soothing radio for enhanced sleep quality. Our
-            most prominent feature will be Eirene herself, a machine learning
-            chatbot that understands the user's emotions and suggests coping
-            mechanisms.
+            Included in Apollo is a page section where developers can add their information with tips, tricks and interview hints that can help developers progress with their web development career.
             <br />
             <br />
-            Eirene aims to lend a helping hand to anyone who requires
-            therapeutic insight, by aiding in different areas such as coping
-            with stress, fueling career success, achieving mindfulness through
+            Apollo aims to lend a helping hand to anyone who requires
+            technical insight, by aiding in different areas such as coping
+            w, fueling careith stresser success, achieving mindfulness through
             meditation, conquering negative thoughts, and building
             self-confidence. Furthermore, the tools in Eirene are also useful
             for people who do not require formal mental health therapy but would
