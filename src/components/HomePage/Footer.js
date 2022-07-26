@@ -16,9 +16,10 @@ const SiteFooter = () => {
         </FooterAddress>
 
         <FooterPara>
-          The next step to self-care therapy. Driven to help with daily lives
-          and support emotionally, Eirene will always lend a hand in times of
-          need.
+          The portal made for developers by developers. Driven to help
+          every individual who strive to improve their technical skills in
+          JavaScript by progressing through community-made documentations and
+          practice.
         </FooterPara>
 
         <LinksMenu>

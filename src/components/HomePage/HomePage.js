@@ -78,61 +78,48 @@ const HomePage = () => {
             </div>
           </ThDetails>
         </TherapistSection>
-
-
-        <RadioSection>
-          <RaHeader>Radio</RaHeader>
-          <RaDescription className="radioDesc">
-            Music can help with stress management and mood modulation. The best
-            feature is that it is always there for anyone who needs it. Whether
-            you're on the edge or need a slight lift, one song can send you back
-            to a more even and healthy place. When it comes to your mental
-            health, music can help you sleep better, raise your mood, and reduce
-            stress.
-          </RaDescription>
-        </RadioSection>
       </Main>
 
       <MeditationSection>
-        <MediHeader>Meditations</MediHeader>
+        <MediHeader>Our Content</MediHeader>
         <MediPara>
-          Meditation is the practice of focused concentration and bringing
-          yourself back to the moment over and over again. <br />
-          Here are some meditations found in Eirene.
+          Every journey hsa its beginning, why not start here ?<br />
+          From "Hello World" to "npm run build". LET'S GO.
+
         </MediPara>
 
         <MediFlex>
           <MediItem>
             <MediImage
-              publicId={"Meditations/meditation_lezixo.jpg"}
-              alt="meditation"
+              publicId={"Provision/home-learn.svg"}
+              alt="learn"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for anxiety</MediName>
+            <MediName>0 level learning</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Meditations/10_min_meditation_for_sleep_a45ext.jpg"}
-              alt="meditation1"
+              publicId={"Provision/home-practice.svg"}
+              alt="practice"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for sleep</MediName>
+            <MediName>Practice Content</MediName>
           </MediItem>
 
           <MediItem>
             <MediImage
-              publicId={"Meditations/10_min_meditation_stress_iwvnuo.jpg"}
-              alt="meditation2"
+              publicId={"Provision/home-interview.svg"}
+              alt="interview"
             >
               <Transformation fetchFormat="auto" />
             </MediImage>
-            <MediName>10 minute meditation for stress</MediName>
+            <MediName>Interview Tips and Tricks</MediName>
           </MediItem>
         </MediFlex>
-        <MediPara>Meditations can be found in the media player</MediPara>
+        <MediPara>All features will be coming soon</MediPara>
       </MeditationSection>
 
       <div className="home-contact">
@@ -433,7 +420,7 @@ const MediImage = styled(Image)`
 const MediName = styled.p`
   background-color: #ffffff;
   font-size: 21px;
-  padding: 20px;
+  padding: 10px;
   font-family: ProximaNova;
 
   @media (max-width: 991px) {

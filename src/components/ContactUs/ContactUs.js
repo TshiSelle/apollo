@@ -111,7 +111,7 @@ const ContactUs = () => {
   );
   return (
     <>
-      <Header>Your Health Starts Here</Header>
+      <Header>Your Journey Starts Here</Header>
       {/* <Paragraph>We would love to hear your feedback</Paragraph> */}
 
       <FormContainer>

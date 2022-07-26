@@ -22,7 +22,7 @@ import ScrollToTop from "./components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
-    <CloudinaryContext cloudName="cloudloom">
+    <CloudinaryContext cloudName="projectapollo">
       <AuthProvider>
         <UserProvider>
           <PageProvider>
