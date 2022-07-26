@@ -97,13 +97,11 @@ const searchPages = () => {
       <PageBanner>
         <BannerHeader>Search Pagess</BannerHeader>
         <BannerPara>
-          Search for a specific therapist by their name or use filter options
-          according to preferred profession, gender, degree attained, or years
-          of experience.
+          Search for a specific page by its title
         </BannerPara>
       </PageBanner>
 
-      <Form className="pageSearch" onSubmit={() => event.preventDefault()}>
+      <Form className="pageSearch" onSubmit={(e) => e.preventDefault()}>
         <div className="searchBar">
           <Form.Control
             className="searchField"
@@ -173,7 +171,7 @@ const searchPages = () => {
   );
 };
 
-export default searchTherapists;
+export default searchPages;
 
 const PageContainer = styled.div`
   font-family: FuturaLight;

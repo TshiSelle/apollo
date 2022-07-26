@@ -16,7 +16,7 @@
   font-size: 1rem;
 }
 
-.therapistSearch label {
+.pageSearch label {
   background-color: #ffffff;
   height: 54px;
   border-radius: 0 4px 4px 0;
@@ -27,14 +27,14 @@
   align-items: center;
 }
 
-.therapistSearch label::after {
+.pageSearch label::after {
   font-family: 'icomoon';
   content: '\f002';
   font-size: 16px;
   color: #e1ebd5;
 }
 
-.therapistSearch label:hover {
+.pageSearch label:hover {
   cursor: pointer;
 }
 
@@ -48,7 +48,7 @@
   gap: 20px;
 }
 
-.dropdown-therapist {
+.dropdown-page {
   width: fit-content;
   height: fit-content;
   border-radius: 5px;
@@ -56,11 +56,11 @@
   border: none;
 }
 
-.dropdown-therapist:focus {
+.dropdown-page:focus {
   box-shadow: unset;
 }
 
-.therapistSearch {
+.pageSearch {
   background-color: #e1ebd5;
   padding: 50px;
   display: flex;
@@ -106,7 +106,7 @@
 }
 
 /* card */
-.therapist-container {
+.page-container {
   max-width: 500px;
   position: relative;
   box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 15%);
@@ -114,7 +114,7 @@
   flex: 1 24%;
 }
 
-.therapist-container img {
+.page-container img {
   width: 100%;
   height: 300px;
   object-fit: cover;
@@ -126,7 +126,7 @@
   right: 10px;
 }
 
-.therapist-parent-container {
+.page-parent-container {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -143,28 +143,28 @@ a:hover {
 
 /* responsivity */
 @media (max-width: 1350px) {
-  .therapist-container {
+  .page-container {
     flex: 1 26%;
   }
 }
 
 @media (max-width: 991px) {
-  .therapist-container {
+  .page-container {
     flex: 1 33%;
   }
 
-  .therapist-container img {
+  .page-container img {
     height: 250px;
   }
 
-  .therapistSearch {
+  .pageSearch {
     padding: 30px;
   }
 
   .searchBar {
     display: grid;
-    grid-template-areas: "search icon" "options options";
-    grid-template-columns: 1fr  auto;
+    grid-template-areas: 'search icon' 'options options';
+    grid-template-columns: 1fr auto;
   }
 
   .searchField {
@@ -179,18 +179,18 @@ a:hover {
     flex-wrap: wrap;
   }
 
-  .dropdown-therapist {
+  .dropdown-page {
     flex: 1 27%;
     position: unset !important;
   }
-  
+
   .hide-mobile {
     display: none;
   }
 }
 
 @media (max-width: 550px) {
-  .therapist-container {
+  .page-container {
     flex: 1 50%;
   }
 }

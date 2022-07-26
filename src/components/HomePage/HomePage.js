@@ -37,7 +37,7 @@ const HomePage = () => {
           <BnDescription>From developers to developers</BnDescription>
         </BannerSection>
 
-        <TherapistSection>
+        <JourneySection>
           <ThImage publicId={"https://res.cloudinary.com/projectapollo/image/upload/v1658815877/Provision/programming.gif"} alt="hand">
             <Transformation fetchFormat="auto" />
           </ThImage>
@@ -56,10 +56,10 @@ const HomePage = () => {
 
             </div>
           </ThDetails>
-        </TherapistSection>
+        </JourneySection>
       </Main>
 
-      <MeditationSection>
+      <ContentSection>
         <MediHeader>Our Content</MediHeader>
         <MediPara>
           Every journey has its beginning, why not start here ?<br />
@@ -70,7 +70,7 @@ const HomePage = () => {
         <MediFlex>
           <MediItem>
             <MediImage
-            className="images"
+              className="images"
               publicId={"Provision/home-learn.svg"}
               alt="learn"
             >
@@ -81,7 +81,7 @@ const HomePage = () => {
 
           <MediItem>
             <MediImage
-            className="images"
+              className="images"
               publicId={"Provision/home-practice.svg"}
               alt="practice"
             >
@@ -92,7 +92,7 @@ const HomePage = () => {
 
           <MediItem>
             <MediImage
-            className="images"
+              className="images"
               publicId={"Provision/home-interview.svg"}
               alt="interview"
             >
@@ -102,7 +102,7 @@ const HomePage = () => {
           </MediItem>
         </MediFlex>
         <MediPara>All features will be coming soon</MediPara>
-      </MeditationSection>
+      </ContentSection>
 
       <div className="home-contact">
         <ContactUs />
@@ -179,7 +179,7 @@ const BnDescription = styled.p`
   }
 `;
 
-const TherapistSection = styled.section`
+const JourneySection = styled.section`
   display: flex;
   height: 738px;
   background-color: #ffffff;
@@ -238,7 +238,7 @@ const ThPara = styled.p`
   }
 `;
 
-const MeditationSection = styled.section`
+const ContentSection = styled.section`
   background-color: #FFD700;
   display: grid;
   justify-items: center;

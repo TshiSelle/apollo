@@ -59,7 +59,7 @@ const searchPages = async (req, res) => {
 		} catch (error) {
 			console.log(error);
 			return res.status(400).json({
-				message: `Error occurred while searching for therapists`,
+				message: `Error occurred while searching for pagess`,
 				success: false,
 				error: error,
 			});
