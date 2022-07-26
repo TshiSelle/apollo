@@ -10,7 +10,7 @@ const VerificationPopUp = () => {
         <img
           src="https://res.cloudinary.com/projectapollo/image/upload/v1655993017/Profiles/jslogo.png"
           className="rounded me-2"
-          alt="eirene logo"
+          alt="apollo logo"
           width="13"
         />
         <strong className="me-auto">Apollo</strong>

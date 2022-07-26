@@ -219,17 +219,17 @@ const SignUpForm = ({ handleModal }) => {
     // Now we should call the api to register user since all userInput has been validated...
     dispatch({ type: "sign-up-start" });
     // make axios post request
-	setLoading(true);
+    setLoading(true);
     SignUpApiCall(username, email, firstName, lastName, password, confirmPassword, gender)
       .then((response) => {
         if (response.data.success) {
           dispatch({ type: "sign-up-success" });
           console.log("Successful signup!");
-		  setLoading(false);
+          setLoading(false);
           updateAuthToken(response.data.token);
         } else {
           dispatch({ type: "sign-up-failure", message: response.data.message });
-		  setLoading(false);
+          setLoading(false);
         }
       })
       .catch((error) => {
@@ -240,7 +240,7 @@ const SignUpForm = ({ handleModal }) => {
           type: "sign-up-failure",
           message: error.response.data.message || specificErrors[0],
         });
-		setLoading(false);
+        setLoading(false);
         return;
       });
   }, [waiting, finished, firstName, lastName, username, email, password, confirmPassword, gender]);
@@ -248,9 +248,9 @@ const SignUpForm = ({ handleModal }) => {
   return (
     <>
       <Header>
-        Sign up to <strong>Eirene</strong>
+        Sign up to <strong>Apollo</strong>
       </Header>
-      <Paragraph>Enter your registration details and start your journey with Eirene.</Paragraph>
+      <Paragraph>Enter your registration details and start your journey with Apollo.</Paragraph>
 
       <FormContainer>
         <Form className="signup-form" onSubmit={submitUser}>
@@ -364,7 +364,7 @@ const SignUpForm = ({ handleModal }) => {
           </Form.Group>
         </Form>
       </FormContainer>
-	  <LoadingSpinner display={isLoading} />
+      <LoadingSpinner display={isLoading} />
     </>
   );
 };

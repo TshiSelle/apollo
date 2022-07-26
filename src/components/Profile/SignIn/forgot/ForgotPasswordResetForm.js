@@ -156,7 +156,7 @@ const ForgotPasswordResetForm = () => {
               <ResponsiveContainer>
                 <Header>Reset Password</Header>
                 <Subheader>
-                  Choose your new password and traverse Eirene again.
+                  Choose your new password and traverse Apollo again.
                 </Subheader>
 
                 <Form className="signup-form" onSubmit={resetUserPassword}>

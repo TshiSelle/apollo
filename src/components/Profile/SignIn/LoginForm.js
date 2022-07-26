@@ -131,10 +131,10 @@ const SignInForm = () => {
   return (
     <>
       <Header>
-        Login to <strong>Eirene</strong>
+        Login to <strong>Apollo</strong>
       </Header>
       <Paragraph>
-        To keep connected with Eirene, please login with your personal info.
+        To keep connected with Apollo, please login with your personal info.
       </Paragraph>
 
       <FormContainer>
