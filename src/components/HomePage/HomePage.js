@@ -43,7 +43,7 @@ const HomePage = () => {
           </ThImage>
 
           <ThDetails>
-            <ThHeader>Find The Therapist For You</ThHeader>
+            <ThHeader>Begin your Journey</ThHeader>
 
             <div>
               <ThPara>
@@ -61,20 +61,7 @@ const HomePage = () => {
                 is ideal for a given problem, and a therapist's ethics or
                 credentials are frequently a factor to consider.
               </ThPara>
-              <ThPara>
-                Our directory is one of the safest sites to find a therapist
-                online because Eirene maintains high member criteria. All
-                therapists listed in our directory must have a graduate degree
-                and agree to follow the components of good therapy. They must
-                also have a professional license or reside in a state in which
-                it is permissibile to practice without one or as an intern under
-                supervision.
-              </ThPara>
-              <ThPara>
-                Finally, if you have any hesitations, you can always text
-                Eirene, your close friend. Because, in the end, she will always
-                be there for you, no matter what.
-              </ThPara>
+
             </div>
           </ThDetails>
         </TherapistSection>
@@ -83,7 +70,7 @@ const HomePage = () => {
       <MeditationSection>
         <MediHeader>Our Content</MediHeader>
         <MediPara>
-          Every journey hsa its beginning, why not start here ?<br />
+          Every journey has its beginning, why not start here ?<br />
           From "Hello World" to "npm run build". LET'S GO.
 
         </MediPara>
