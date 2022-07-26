@@ -199,7 +199,7 @@ const ContactUsExt = () => {
   return (
     <>
       <div className="contact-container">
-        <Header>Your Journey Starts Here</Header>
+        <Header>Join the Team !</Header>
         {/* <Paragraph>We would love to hear your feedback</Paragraph> */}
 
         <FormContainer>

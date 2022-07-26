@@ -23,13 +23,8 @@ const AboutUs = () => {
             <br />
             <br />
             Apollo aims to lend a helping hand to anyone who requires
-            technical insight, by aiding in different areas such as coping
-            w, fueling careith stresser success, achieving mindfulness through
-            meditation, conquering negative thoughts, and building
-            self-confidence. Furthermore, the tools in Eirene are also useful
-            for people who do not require formal mental health therapy but would
-            like to practice self-care. This aid will be provided mainly through
-            the convenience of a website with its responsive mobile application.
+            technical insight, by aiding in different areas such as covering knowledge gaps, technical tips, and fun facts.
+
           </AboutUsText>
         </AboutUsContainer>
       </BgContainer>
