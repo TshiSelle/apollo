@@ -48,7 +48,7 @@ const FooterContainer = styled.div`
   font-family: FuturaLight;
   line-height: 1.5;
   color: #ffffff;
-  background-color: #414141;
+  background-color: #000103;
   padding: 50px;
 `;
 

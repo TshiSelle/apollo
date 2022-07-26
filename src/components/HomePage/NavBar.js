@@ -45,7 +45,7 @@ const NavBar = () => {
 
         <Dropdown className="btn-primary">
           <Dropdown.Toggle>
-            <StyledImage publicId={userImage ? userImage : "Profiles/avatar_navbar"} alt="profile">
+            <StyledImage publicId={userImage ? userImage : "Profiles/avatar_test.gif"} alt="profile">
               <Transformation fetchFormat="auto" />
             </StyledImage>
           </Dropdown.Toggle>
@@ -91,7 +91,7 @@ const NavBar = () => {
 };
 
 const Header = styled.header`
-  background-color: #ffffff;
+  background-color: #000103;
   height: 108px;
   position: sticky;
   width: 100%;
@@ -118,7 +118,7 @@ const Nav = styled.nav`
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: #fff;
+    background-color: #000103;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;

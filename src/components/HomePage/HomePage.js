@@ -257,7 +257,7 @@ const ThPara = styled.p`
 `;
 
 const MeditationSection = styled.section`
-  background-color: #e1ebd5;
+  background-color: #FFD700;
   display: grid;
   justify-items: center;
   margin-top: 150px;
