@@ -48,7 +48,7 @@
   top: 5px;
   right: 0;
   display: grid;
-  background-color: #e1ebd5;
+  background-color: #ffc000;
   padding: 10px;
   border-radius: 5px 0 0 5px;
 }
@@ -58,7 +58,7 @@
   overflow: auto;
   white-space: nowrap;
   overflow-y: hidden;
-  background-color: #e1ebd5;
+  background-color: #ffc000;
 }
 
 .scroll::-webkit-scrollbar {
@@ -71,7 +71,7 @@
 }
 
 .scroll::-webkit-scrollbar-thumb {
-  background-color: #e1ebd5;
+  background-color: #ffc000;
 }
 
 .react-tabs__tab-list {
@@ -85,12 +85,12 @@
 }
 
 .react-tabs__tab:not(.react-tabs__tab--selected):hover {
-  background-color: #ecf3e3;
+  background-color: #ffc000;
 }
 
 .react-tabs__tab--selected {
   background-color: #ffffff;
-  border: 1px solid #e1ebd5;
+  border: 1px solid #ffc000;
   border-radius: 0;
   cursor: default;
 }
