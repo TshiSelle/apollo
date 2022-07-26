@@ -139,7 +139,7 @@ const Container = styled.div`
 `;
 
 const GreenBackground = styled.div`
-  background-color: #e1ebd5;
+  background-color: #54626F;
   height: 1101px;
   width: 100%;
   position: absolute;
