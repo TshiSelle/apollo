@@ -1,7 +1,7 @@
 const nodemailer = require("nodemailer");
 
 //*************** Email transfer functions ******************
-const CLIENT_URL = process.env.NODE_ENV == "development" ? `http://localhost:${process.env.CLIENT_PORT}` : "";
+const CLIENT_URL = process.env.NODE_ENV == "development" ? `http://localhost:${process.env.CLIENT_PORT}` : "https://git.heroku.com/apollo-project22.git";
 
 var Transport = nodemailer.createTransport({
   host: 'smtp.zoho.com',
