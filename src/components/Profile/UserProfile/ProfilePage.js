@@ -84,7 +84,7 @@ const ProfilePage = () => {
   const handleNameChange = () => {
     ChangeName(firstName, lastName, authToken).then((response) => {
       if (response.data.success) {
-		  setUser({...user, fname: firstName, lname: lastName})
+        setUser({ ...user, fname: firstName, lname: lastName })
         setIsEdit(false);
       }
     });
@@ -317,7 +317,7 @@ const LoggedOutPage = styled.div`
 const SignUpButton = styled.button`
   width: 404px;
   justify-self: center;
-  border: 1px solid #edbec4;
+  border: 1px solid #54626F;
   background-color: transparent;
   height: 54px;
   color: #212529;
@@ -335,14 +335,15 @@ const SignUpButton = styled.button`
 const SignInButton = styled.button`
   width: 404px;
   justify-self: center;
-  background-color: #edbec4;
+  background-color: #54626F;
   border: none;
   height: 54px;
   color: #ffffff;
   border-radius: 0.25rem;
 
   &:hover {
-    background-color: #edafb6;
+    background-color: #FFC000;
+    color: #000103;
   }
 
   @media (max-width: 991px) {
